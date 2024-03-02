@@ -11,8 +11,13 @@ class Article extends Model
 
     protected $fillable = [
         'title',
-        'user_id',
+        'lkk_id',
         'thumbnail',
         'content',
     ];
+
+    public function lkk()
+    {
+        return $this->belongsTo(Lkk::class);
+    }
 }
