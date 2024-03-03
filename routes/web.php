@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\FeedController;
-use App\Http\Controllers\lkkController;
-use App\Http\Controllers\umkmController;
-use App\Http\Controllers\UserController;
 use App\Models\Article;
 use App\Models\feedback;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\lkkController;
+use App\Http\Controllers\FeedController;
+use App\Http\Controllers\umkmController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,9 +46,7 @@ Route::post('/feedback', [FeedController::class, 'add'])->middleware('throttle:f
 
 // article
 Route::get('article', [ArticleController::class, 'show']);
-Route::get('/article/add', function () {
-    return view('/article/add');
-});
+Route::get('/article/add', [ArticleController::class, 'addView']);
 Route::post('/article/add', [ArticleController::class, 'add']);
 Route::get('/article/{id}', [ArticleController::class, 'detail']);
 Route::get('/article/update/{id}', [ArticleController::class, 'updateView']);
@@ -76,10 +75,12 @@ Route::get('/lkk/delete/{id}', [lkkController::class, 'delete']);
 
 // user
 Route::get('/user', [userController::class, 'show']);
-Route::get('/user/add', function () {
-    return view('user.add');
-});
+Route::get('/user/add', [UserController::class, 'addView']);
 Route::post('/user/add', [userController::class, 'add']);
 Route::get('/user/update/{id}', [userController::class, 'updateView']);
 Route::put('/user/update/{id}', [userController::class, 'update']);
 Route::get('/user/delete/{id}', [userController::class, 'delete']);
+
+Route::get('/test', function () {
+    dd(Auth::user()->lkk_id);
+});

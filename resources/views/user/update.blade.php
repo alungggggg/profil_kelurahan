@@ -14,6 +14,12 @@
         @method('put')
         <input type="text" name="name" value="{{ $user->name }}">
         <input type="email" name="email" value="{{ $user->email }}">
+        <select name="lkk">
+            @foreach ($lkks as $lkk)
+                <option value="{{ $lkk->id }}" @if ($user->lkk_id == $lkk->id) selected @endif>
+                    {{ $lkk->nama_lembaga }}</option>
+            @endforeach
+        </select>
         <button type="submit">submit</button>
     </form>
 </body>

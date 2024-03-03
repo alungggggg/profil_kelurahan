@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Lkk;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
 class ArticleController extends Controller
@@ -34,9 +36,13 @@ class ArticleController extends Controller
             $article->thumbnail = $path . $filename;
         }
         $article->title = $request->title;
-        $article->thumbnail = $path.$filename;
+        $article->thumbnail = $path . $filename;
         $article->content = $request->description;
         $article->save();
+    }
+    public function addView()
+    {
+        return view('article.add');
     }
 
     public function add(Request $request)
@@ -58,6 +64,7 @@ class ArticleController extends Controller
         Article::create([
             'title' => $request->title,
             'thumbnail' => $path . $filename,
+            'lkk_id' => Auth::user()->lkk_id,
             'content' => $request->description,
         ]);
     }
