@@ -13,6 +13,7 @@ class Lkk extends Model
     protected $fillable = [
         'nama_lembaga',
         'logo',
-        'description'
+        'description',
+        'role_id'
     ];
 }

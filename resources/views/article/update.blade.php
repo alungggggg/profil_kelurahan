@@ -14,11 +14,20 @@
         @method('put')
         <input class="form-control" type="text" placeholder="title" name="title" aria-label="default input example"
             value="{{ $article->title }}">
+        @error('title')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
         <img src="{{ asset($article->thumbnail) }}" alt="" style="width: 200px">
         <input type="file" name="thumbnail">
+        @error('thumbnail')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
         <textarea id="editor" type="text" name="description">
             {{ $article->content }}
         </textarea>
+        @error('description')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
         <button type="submit">SUBMIT</button>
     </form>
     <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>

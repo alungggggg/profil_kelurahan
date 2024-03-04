@@ -13,9 +13,25 @@
         @csrf
         @method('put')
         <input type="text" name="nama_lembaga" value="{{ $lkk->nama_lembaga }}">
+        @error('nama_lembaga')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
         <img src="{{ asset($lkk->logo) }}" alt="" style="width:100px">
         <input type="file" name="logo">
-        <input type="text" name="description" value="{{$lkk->description}}">
+        @error('logo')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
+        <input type="text" name="description" value="{{ $lkk->description }}">
+        @error('description')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
+        <select name="role_id">
+            <option value="1">LKK</option>
+            <option value="2">Forum Kemasyarakatan</option>
+        </select>
+        @error('role_id')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
         <button type="submit">submit</button>
     </form>
 </body>

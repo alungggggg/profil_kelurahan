@@ -13,13 +13,22 @@
         @csrf
         @method('put')
         <input type="text" name="name" value="{{ $user->name }}">
+        @error('name')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
         <input type="email" name="email" value="{{ $user->email }}">
+        @error('email')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
         <select name="lkk">
             @foreach ($lkks as $lkk)
                 <option value="{{ $lkk->id }}" @if ($user->lkk_id == $lkk->id) selected @endif>
                     {{ $lkk->nama_lembaga }}</option>
             @endforeach
         </select>
+        @error('lkk')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
         <button type="submit">submit</button>
     </form>
 </body>

@@ -11,9 +11,26 @@
 <body>
     <form action="" method="POST" enctype="multipart/form-data">
         @csrf
-        <input type="text" name="nama_lembaga">
+        <input type="text" name="nama_lembaga" value="{{ old('nama_lembaga') }}">
+        @error('nama_lembaga')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
         <input type="file" name="logo">
-        <input type="text" name="description">
+        @error('logo')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
+        <input type="text" name="description" value="{{ old('description') }}">
+        @error('description')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
+        <select name="role_id">
+            <option value="1">LKK</option>
+            <option value="2">Forum Kemasyarakatan</option>
+        </select>
+        @error('role_id')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
+
         <button type="submit">submit</button>
     </form>
 </body>

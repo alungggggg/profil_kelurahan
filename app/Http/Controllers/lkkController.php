@@ -18,7 +18,8 @@ class lkkController extends Controller
         $request->validate([
             'nama_lembaga' => 'required',
             'logo' => 'required|mimes:png,jpg,jpeg,webp',
-            'description' => 'required'
+            'description' => 'required',
+            'role_id' => 'required'
         ]);
 
         $file = $request->file('logo');
@@ -31,6 +32,7 @@ class lkkController extends Controller
             'nama_lembaga' => $request->nama_lembaga,
             'logo' => $path . $filename,
             'description' => $request->description,
+            'role_id' => $request->role_id
         ]);
     }
     public function updateView($id)
@@ -42,7 +44,8 @@ class lkkController extends Controller
         $request->validate([
             'nama_lembaga' => 'required',
             'logo' => 'mimes:png,jpg,jpeg,webp',
-            'description' => 'required'
+            'description' => 'required',
+            'role_id' => $request->role_id
         ]);
 
         $lkk = lkk::findOrFail($id);
@@ -58,10 +61,9 @@ class lkkController extends Controller
             }
             $lkk->logo = $path . $filename;
         }
-
         $lkk->nama_lembaga = $request->nama_lembaga;
         $lkk->description = $request->description;
-
+        $lkk->role_id = $request->role_id;
         $lkk->save();
     }
     public function delete($id)

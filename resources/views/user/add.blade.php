@@ -11,14 +11,28 @@
 <body>
     <form action="" method="POST">
         @csrf
-        <input type="text" name="name">
-        <input type="email" name="email">
+        <input type="text" name="name" value="{{ old('name') }}">
+        @error('nama')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
+        <input type="email" name="email" value="{{ old('email') }}">
+        @error('email')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
         <input type="password" name="password">
+        @error('password')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
         <select name="lkk">
             @foreach ($lkks as $lkk)
-                <option value="{{ $lkk->id }}">{{ $lkk->nama_lembaga }}</option>
+                <option value="{{ $lkk->id }}" @if ($lkk->id == old('lkk')) selected @endif>
+                    {{ $lkk->nama_lembaga }}</option>
             @endforeach
         </select>
+        @error('lkk')
+            <div class="form-text">{{ $message }}</div>
+        @enderror
+
         <button type="submit">submit</button>
     </form>
 </body>
