@@ -9,6 +9,7 @@ use App\Http\Controllers\FeedController;
 use App\Http\Controllers\umkmController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\fkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,16 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/lkk/update/{id}', [lkkController::class, 'updateView']);
     Route::put('/lkk/update/{id}', [lkkController::class, 'update']);
     Route::get('/lkk/delete/{id}', [lkkController::class, 'delete']);
+
+    // fk belum
+    Route::get('/fk', [fkController::class, 'show']);
+    Route::get('/fk/add', function () {
+        return view('fk.add');
+    });
+    Route::post('/fk/add', [fkController::class, 'add']);
+    Route::get('/fk/update/{id}', [fkController::class, 'updateView']);
+    Route::put('/fk/update/{id}', [fkController::class, 'update']);
+    Route::get('/fk/delete/{id}', [fkController::class, 'delete']);
 
     // user
     Route::get('/user', [userController::class, 'show']);

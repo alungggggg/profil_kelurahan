@@ -25,13 +25,6 @@
         @error('description')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <select name="role_id">
-            <option value="1">LKK</option>
-            <option value="2">Forum Kemasyarakatan</option>
-        </select>
-        @error('role_id')
-            <div class="form-text">{{ $message }}</div>
-        @enderror
         <button type="submit">submit</button>
     </form>
 </body>

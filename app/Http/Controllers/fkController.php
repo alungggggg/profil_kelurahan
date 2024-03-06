@@ -6,12 +6,13 @@ use App\Models\Lkk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
-class lkkController extends Controller
+class fkController extends Controller
 {
-    //lkk
+    //
     public function show()
     {
-        return view('lkk.index', ['lkks' => Lkk::where('role_id', '=', 1)->get()]);
+        // dd(Lkk::where('role_id', '=', 2)->get());
+        return view('fk.index', ['fks' => Lkk::where('role_id', '=', 2)->get()]);
     }
     public function add(Request $request)
     {
@@ -31,17 +32,17 @@ class lkkController extends Controller
             'nama_lembaga' => $request->nama_lembaga,
             'logo' => $path . $filename,
             'description' => $request->description,
-            'role_id' => 1
+            'role_id' => 2
         ]);
     }
 
     public function updateView($id)
     {
-        $lkk = Lkk::findOrFail($id);
-        if ($lkk->role_id != 1) {
+        $fk = Lkk::findOrFail($id);
+        if ($fk->role_id != 2) {
             abort(404);
         }
-        return view('lkk.update', ['lkk' => Lkk::findOrFail($id)]);
+        return view('fk.update', ['fk' => Lkk::findOrFail($id)]);
     }
     public function update(Request $request, $id)
     {
@@ -51,7 +52,7 @@ class lkkController extends Controller
             'description' => 'required',
         ]);
 
-        $lkk = lkk::findOrFail($id);
+        $fk = lkk::findOrFail($id);
 
         if ($request->has('logo')) {
             $file = $request->file('logo');
@@ -59,24 +60,24 @@ class lkkController extends Controller
             $filename = time() . '.' . $extention;
             $path = 'uploads/lkk/';
             $file->move($path, $filename);
-            if (File::exists($lkk->image)) {
-                File::delete($lkk->image);
+            if (File::exists($fk->image)) {
+                File::delete($fk->image);
             }
-            $lkk->logo = $path . $filename;
+            $fk->logo = $path . $filename;
         }
-        $lkk->nama_lembaga = $request->nama_lembaga;
-        $lkk->description = $request->description;
-        $lkk->save();
+        $fk->nama_lembaga = $request->nama_lembaga;
+        $fk->description = $request->description;
+        $fk->save();
     }
     public function delete($id)
     {
-        $lkk = Lkk::findOrFail($id);
-        if ($lkk->role_id != 1) {
+        $fk = lkk::findOrFail($id);
+        if ($fk->role_id != 2) {
             abort(404);
         }
-        if (File::exists($lkk->image)) {
-            File::delete($lkk->image);
+        if (File::exists($fk->image)) {
+            File::delete($fk->image);
         }
-        $lkk->delete();
+        $fk->delete();
     }
 }
