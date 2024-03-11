@@ -1785,7 +1785,7 @@ body{
     top: 5%;
 }
 .gallery-timeline .cd-timeline-img { 
-    background-color: #E54D42;
+    background-color: #761B9E;
     width: 38px;
     height: 38px;
     left: 51%;
@@ -2834,7 +2834,7 @@ a:hover , .btn-link:hover{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#332c3e4f', endColorstr='#c42c3e4f',GradientType=0 );
 }
 .fables-main-background-color ,.fables-main-before a::before , .fables-main-before a::after ,.fables-main-active.active , .fables-main-dots .owl-dot.active span ,.fables-main-hover-background-color:hover{
-    background-color: purple !important;
+    background-color: #761B9E !important;
 }
 .fables-main-text-color{
     color: #2C3E4F ;
@@ -2858,13 +2858,13 @@ a:hover , .btn-link:hover{
     color: #fff;
 }
 .fables-second-text-color{
-    color: #E54D42 ;
+    color: #761B9E ;
 }
  .fables-second-hover-color:hover , .fables-second-hover-color-link a:hover{
     color: #E54D42  ;
 }
 .fables-second-border-color {
-    border-color: #E54D42 !important;
+    border-color: #761B9E !important;
 }
 .fables-second-hover-text-color:hover .fables-main-text-color ,.fables-second-hover-color:hover .fables-third-text-color
 ,.fables-second-hover-text-color:hover .fables-fifth-border-color{
