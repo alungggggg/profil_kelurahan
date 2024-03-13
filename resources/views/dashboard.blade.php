@@ -44,24 +44,6 @@
 
 
 <body>
-
-<div class="search-section">
-    <a class="close-search" href="#"></a>
-    <div class="d-flex justify-content-center align-items-center h-100">
-        <form method="post" action="#" class="w-50">
-            <div class="row">
-                <div class="col-10">
-                    <input type="search" value="" class="form-control palce bg-transparent border-0 search-input" placeholder="Search Here ..." /> 
-                </div>
-                <div class="col-2 mt-3">
-                     <button type="submit" class="btn bg-transparent text-white"> <i class="fas fa-search"></i> </button>
-                </div>
-            </div>
-        </form>
-    </div>
-         
-</div>
-    
 <!-- Loading Screen -->
 <div id="ju-loading-screen">
   <div class="sk-double-bounce">
@@ -71,18 +53,14 @@
 </div>
 
 <!-- Start Fables Navigation -->
-<div class="">
-    <div class="">
-        
+<div class="fables-navigation fables-main-background-color py-3 py-lg-0">
+    <div class="container">
                <div class="row">
-               <div class="col-12 col-lg-1">
-                <a class="navbar-brand" href="#"></a>
-                             
-                </div> 
-                <div class="col-12 col-lg-1">
-                <a class="image-container img-fluid" href="#"><img width="139%" src="{{asset('/asset/image/navngampel.png')}}"></a>
-                </div> 
-                   <div class="col-12 col-lg-10">                       
+                <div class="col-12 col-lg-4">
+                    <a class="navbar-brand" href="#"></a>                             
+                    </div> 
+                
+                   <div class="col-12 col-lg-8">                       
                        <nav class="navbar fables-main-background-color navbar-expand-md btco-hover-menu py-lg-2">
          
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fablesNavDropdown" aria-controls="fablesNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,7 +134,7 @@
                                         </a>
                                     </li>
 
-                                    <li class="nav-item dropdown">
+                                    <li class="nav-item">
                                         <a class="nav-link btn-danger" href="#" id="sub-nav3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             UMKM
                                         </a>
@@ -167,8 +145,16 @@
                 </nav>
                 
                </div>
+               
     </div>
-</div> <br>
+</div> 
+<div class="container">
+<div class="row">
+                <div class="col-12 col-lg-2">
+                    <a href="#"><img src="{{asset('/asset/image/navngampel.png')}}" class="fables-logo w-50"></a>
+                    </div> 
+                </div>
+</div><br>
 <!-- /End Fables Navigation -->  
 
 <!-- Foto -->
@@ -231,8 +217,8 @@
 <!-- Sambutan -->
             <div class="row">
                <div class="col-12 col-lg-3 p-0 wow fadeInLeftBig" data-wow-duration="4s">
-                   <div class="image-container img-fluid">
-                       <a href="#"><img width="100%" src="{{asset('/asset/image/paklurah.png')}}"></a>
+                   <div class="">
+                       <a href="#"><img src="{{asset('/asset/image/paklurah.png')}}" class="fables-logo w-100"></a>
                    </div>
                </div>
                <div class="col-12 col-lg-9 p-0 wow fadeInRightBig" data-wow-duration="4s">
@@ -454,23 +440,6 @@
                 <span class="cd-date fables-second-text-color">VIDEO</span>
             </div> <!-- cd-timeline-content -->
         </div> <!-- cd-timeline-block -->
-
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img"></div> 
-           <div class="cd-timeline-content"> 
-                  <a href="#"><img src="{{asset('/asset/image/kucing.jpg')}}" alt="" class="w-100"></a> 
-                  <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  </a></h2> 
-                  <p class="fables-forth-text-color fables-gallery-timeline-details">
-                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
-                  </p>
- 
-                <span class="cd-date fables-second-text-color">VIDEO</span>
-            </div> <!-- cd-timeline-content -->
-        </div> <!-- cd-timeline-block -->
-
-
     </div>
 </div>  
 <!-- /End page content -->
@@ -539,3 +508,4 @@
  
     
 </body>
+</html>
