@@ -28,7 +28,7 @@ Route::get('/', function () {
 
 // login admin
 Route::controller(UserController::class)->group(function () {
-    Route::get('/login', 'loginView');
+    Route::get('/login', 'loginView')->middleware('guest');
     // Route::post('/login', 'login')->middleware('throttle:login');
     Route::post('/login', 'login');
     Route::get('/logout', 'logout');

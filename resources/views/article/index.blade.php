@@ -13,6 +13,9 @@
         <input type="text" name="search" value="{{ $request }}">
         <button type="submit">search</button>
     </form>
+    @if (session('message'))
+        <div class="alert">{{ session('message') }}</div>
+    @endif
     <a href="/article/add">add</a>
     @if ($articles->count() === 0)
         tidak ada artikel
