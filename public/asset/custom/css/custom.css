@@ -2850,7 +2850,7 @@ a:hover , .btn-link:hover{
 }
  
 .fables-second-background-color ,.fables-second-before::before , .fables-second-before::after ,.fables-second-hover-background-color:hover ,.fables-second-active.active , .fables-second-dots .owl-dot.active span{
-    background-color: #E54D42 !important;
+    background-color: #761B9E !important;
     transition: all ease-in-out .3s;
 }
  
