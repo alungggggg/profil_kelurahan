@@ -40,6 +40,11 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard');
     });
 
+    //profil
+    Route::get('/profil', function () {
+        return view('profil');
+    });
+
     // article
     Route::get('article', [ArticleController::class, 'show']);
     Route::get('/article/add', [ArticleController::class, 'addView']);
