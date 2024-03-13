@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UMKM</title>
+
+
 </head>
 
 <body>
@@ -15,7 +17,8 @@
         @error('namaToko')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <input type="file" name="image">
+        <img src="" alt="" id="preview" style="width:75px">
+        <input type="file" name="image" id="img">
         @error('image')
             <div class="form-text">{{ $message }}</div>
         @enderror
@@ -33,6 +36,22 @@
         @enderror
         <button type="submit">SUBMIT</button>
     </form>
+    @push('scripts')
+        <script>
+            const reader = new FileReader();
+            const fileInput = document.getElementById("img");
+            const img = document.getElementById("preview");
+            reader.onload = e => {
+                img.src = e.target.result;
+            }
+            fileInput.addEventListener('change', e => {
+                const f = e.target.files[0];
+                reader.readAsDataURL(f);
+            })
+        </script>
+    @endpush
+    @stack('scripts')
+
 </body>
 
 </html>

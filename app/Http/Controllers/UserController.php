@@ -44,12 +44,19 @@ class UserController extends Controller
         return redirect('/');
     }
 
-    public function show()
+    public function show(Request $request)
     {
-        return view('user.index', [
-            'users' => User::where('id', '!=', auth()->id())->get(),
-
-        ]);
+        $data = [
+            'request' => $request->search,
+            'users' => User::where('id', '<>', auth()->id())->paginate(5)
+        ];
+        if ($request->has('search')) {
+            $data = [
+                'users' => User::where('name', 'LIKE', '%' . $request->search . '%')->paginate(5),
+                'request' => $request->search
+            ];
+        }
+        return view('user.index', $data);
     }
     public function addView()
     {
@@ -71,6 +78,8 @@ class UserController extends Controller
             'lkk_id' => $request->lkk,
             'password' => Hash::make($request->password),
         ]);
+
+        return redirect()->intended('/user')->with('message', 'User berhasil dibuat!');
     }
     public function updateView($id)
     {
@@ -88,9 +97,11 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->lkk_id = $request->lkk;
         $user->save();
+        return redirect()->intended('/user')->with('message', 'user berhasil diupdate!');
     }
     public function delete($id)
     {
         User::findOrFail($id)->delete();
+        return redirect()->intended('/user')->with('message', 'user berhasil dihapus!');
     }
 }

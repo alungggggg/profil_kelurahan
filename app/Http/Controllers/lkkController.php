@@ -9,9 +9,19 @@ use Illuminate\Support\Facades\File;
 class lkkController extends Controller
 {
     //lkk
-    public function show()
+    public function show(Request $request)
     {
-        return view('lkk.index', ['lkks' => Lkk::where('role_id', '=', 1)->get()]);
+        $data = [
+            'request' => $request->search,
+            'lkks' => Lkk::where('role_id', '=', 1)->paginate(5)
+        ];
+        if ($request->has('search')) {
+            $data = [
+                'lkks' => Lkk::where('nama_lembaga', 'LIKE', '%' . $request->search . '%')->where('role_id', '=', 1)->paginate(5),
+                'request' => $request->search
+            ];
+        }
+        return view('lkk.index', $data);
     }
     public function add(Request $request)
     {
@@ -33,6 +43,8 @@ class lkkController extends Controller
             'description' => $request->description,
             'role_id' => 1
         ]);
+
+        return redirect()->intended('/lkk')->with('message', 'Lkk berhasil dibuat!');
     }
 
     public function updateView($id)
@@ -59,14 +71,15 @@ class lkkController extends Controller
             $filename = time() . '.' . $extention;
             $path = 'uploads/lkk/';
             $file->move($path, $filename);
-            if (File::exists($lkk->image)) {
-                File::delete($lkk->image);
+            if (File::exists($lkk->logo)) {
+                File::delete($lkk->logo);
             }
             $lkk->logo = $path . $filename;
         }
         $lkk->nama_lembaga = $request->nama_lembaga;
         $lkk->description = $request->description;
         $lkk->save();
+        return redirect()->intended('/lkk')->with('message', 'Lkk berhasil diperbarui!');
     }
     public function delete($id)
     {
@@ -74,9 +87,10 @@ class lkkController extends Controller
         if ($lkk->role_id != 1) {
             abort(404);
         }
-        if (File::exists($lkk->image)) {
-            File::delete($lkk->image);
+        if (File::exists($lkk->logo)) {
+            File::delete($lkk->logo);
         }
         $lkk->delete();
+        return redirect()->intended('/lkk')->with('message', 'Lkk berhasil dihapus!');
     }
 }
