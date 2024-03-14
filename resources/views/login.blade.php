@@ -23,7 +23,9 @@
             <div class="card-main">
                 <div class="card-header">Halaman Login</div>
                 <div class="card-body">
-                    
+                    @error('fail')
+                            <div class="alert alert-danger" role="alert">{{ $message }}</div>
+                        @enderror
                     <form action="" method="POST" class="form-login">
                          @csrf
                         <label for="exampleInputEmail1" class="form-label">Alamat Email</label>
@@ -31,9 +33,7 @@
                         <label for="exampleInputPassword1" class="form-label">Kata Sandi</label>
                         <input type="password" name="password" id="exampleInputPassword1" class="form-input">
                         <button type="submit" class="btn btn-login">Login</button>
-                        @error('fail')
-                            <div class="form-text">{{ $message }}</div>
-                        @enderror
+                        
                     </form>
                     <p style="text-align: center;">Menuju ke halaman?<span><a href="<?= "" ?>" class=""> Utama |</a></span><span><a href="" class=""> Beranda </a></span></p>
                 </div>
