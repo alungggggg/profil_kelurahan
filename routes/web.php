@@ -10,6 +10,7 @@ use App\Http\Controllers\umkmController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\fkController;
+use App\Http\Controllers\guestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,8 @@ use App\Http\Controllers\fkController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [guestController::class, 'home'])->name('home');
+Route::get('/lembaga', [guestController::class,'lembaga']);
 
 // login admin
 Route::controller(UserController::class)->group(function () {

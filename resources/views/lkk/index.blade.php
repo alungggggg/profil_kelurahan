@@ -52,9 +52,9 @@
         </table>
     @endif
 
-    current page : {{ $lkk->currentPage() }} <br />
-    total data : {{ $lkk->total() }} <br />
-    {{ $lkk->links() }}
+    current page : {{ $lkks->currentPage() }} <br />
+    total data : {{ $lkks->total() }} <br />
+    {{ $lkks->links() }}
 
 </body>
 
