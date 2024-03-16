@@ -40,6 +40,11 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard');
     });
 
+    //admin
+    Route::get('/admin', function () {
+        return view('admin');
+    });
+
     //profil
     Route::get('/profil', function () {
         return view('profil');
