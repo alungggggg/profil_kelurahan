@@ -62,6 +62,20 @@ class UserController extends Controller
     {
         return view('user.add', ['lkks' => Lkk::all()]);
     }
+    public function changePass(Request $request, $id)
+    {
+        // dd($request->confirmPass);
+        $request->validate([
+            'password' => ['required', 'min:8'],
+            'confirmPass' => ['required', 'same:password']
+        ]);
+
+        $user = User::findOrFail($id);
+        $user->password = $request->password;
+        $user->save();
+
+        return redirect()->intended('/user')->with('message', 'password berhasil diganti!');
+    }
     public function add(Request $request)
     {
         $request->validate([

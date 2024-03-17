@@ -37,6 +37,7 @@
                     <td>{{ $user->lkk_id }}</td>
                     <td><a href="user/update/{{ $user->id }}">update</a></td>
                     <td><a href="user/delete/{{ $user->id }}">delete</a></td>
+                    <td><a href="user/update/password/{{ $user->id }}">ganti password</a></td>
                 </tr>
             @endforeach
         </table>

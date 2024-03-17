@@ -26,11 +26,11 @@ use App\Http\Controllers\guestController;
 Route::get('/', [guestController::class, 'home'])->name('home');
 Route::get('/lembaga', [guestController::class, 'lembaga']);
 Route::get('/profil', function () {
-        return view('profil');
-    });
+    return view('profil');
+});
 Route::get('/pelayanan', function () {
-        return view('pelayanan');
-    });
+    return view('pelayanan');
+});
 
 // login admin
 Route::controller(UserController::class)->group(function () {
@@ -49,10 +49,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin', function () {
         return view('admin');
     });
-    
+
 
     // article
-    Route::get('/article', [ArticleController::class, 'show']);
+    Route::get('    /article', [ArticleController::class, 'show']);
     Route::get('/article/add', [ArticleController::class, 'addView'])->middleware('admin');
     Route::post('/article/add', [ArticleController::class, 'add'])->middleware('admin');
     Route::get('/article/{id}', [ArticleController::class, 'detail']);
@@ -98,6 +98,10 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/user/add', [userController::class, 'add']);
         Route::get('/user/update/{id}', [userController::class, 'updateView']);
         Route::put('/user/update/{id}', [userController::class, 'update']);
+        Route::get('/user/update/password/{id}', function (){
+            return view('user.changePass');
+        });
+        Route::post('/user/update/password/{id}', [userController::class, 'changePass']);
         Route::get('/user/delete/{id}', [userController::class, 'delete']);
     });
 
