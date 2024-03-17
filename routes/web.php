@@ -26,8 +26,11 @@ use App\Http\Controllers\guestController;
 Route::get('/', [guestController::class, 'home'])->name('home');
 Route::get('/lembaga', [guestController::class, 'lembaga']);
 Route::get('/profil', function () {
-    return view('profil');
-});
+        return view('profil');
+    });
+Route::get('/pelayanan', function () {
+        return view('pelayanan');
+    });
 
 // login admin
 Route::controller(UserController::class)->group(function () {
@@ -43,11 +46,10 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard');
     });
 
-
-    //pelayanan
-    Route::get('/pelayanan', function () {
-        return view('pelayanan');
+    Route::get('/admin', function () {
+        return view('admin');
     });
+    
 
     // article
     Route::get('/article', [ArticleController::class, 'show']);
