@@ -24,9 +24,19 @@
             LKK/Forum Kemasyarakatan
         </label>
         <select name="lkk">
-            @foreach ($lkks as $lkk)
+            {{-- @foreach ($lkks as $lkk)
                 <option value="{{ $lkk->id }}" @if ($user->lkk_id == $lkk->id) selected @endif>
                     {{ $lkk->nama_lembaga }}</option>
+            @endforeach --}}
+            <option disabled>LKK</option>
+            @foreach ($lkks->where('role_id', '=', 1) as $lkk)
+                <option value="{{ $lkk->id }}" @if ($lkk->id == $lkk->id) selected @endif>
+                    {{ $lkk->nama_lembaga }}</option>
+            @endforeach
+            <option disabled>Forum Kemasyarakatan</option>
+            @foreach ($lkks->where('role_id', '=', 2) as $fk)
+                <option value="{{ $fk->id }}" @if ($fk->id == $fk->id) selected @endif>
+                    {{ $fk->nama_lembaga }}</option>
             @endforeach
         </select>
         @error('lkk')

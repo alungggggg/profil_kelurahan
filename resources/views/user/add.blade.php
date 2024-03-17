@@ -25,9 +25,15 @@
         @enderror
         <label for="">LKK / Forum Kemasyarakatan</label>
         <select name="lkk">
-            @foreach ($lkks as $lkk)
+            <option disabled>LKK</option>
+            @foreach ($lkks->where('role_id', '=', 1) as $lkk)
                 <option value="{{ $lkk->id }}" @if ($lkk->id == old('lkk')) selected @endif>
                     {{ $lkk->nama_lembaga }}</option>
+            @endforeach
+            <option disabled>Forum Kemasyarakatan</option>
+            @foreach ($lkks->where('role_id', '=', 2) as $fk)
+                <option value="{{ $fk->id }}" @if ($fk->id == old('lkk')) selected @endif>
+                    {{ $fk->nama_lembaga }}</option>
             @endforeach
         </select>
         @error('lkk')

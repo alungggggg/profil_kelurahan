@@ -1,16 +1,17 @@
 <?php
 
+use App\Models\Lkk;
 use App\Models\Article;
 use App\Models\feedback;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\fkController;
 use App\Http\Controllers\lkkController;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\umkmController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\fkController;
 use App\Http\Controllers\guestController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,9 +26,7 @@ use App\Http\Controllers\guestController;
 
 Route::get('/', [guestController::class, 'home'])->name('home');
 Route::get('/lembaga', [guestController::class, 'lembaga']);
-Route::get('/profil', function () {
-    return view('profil');
-});
+Route::get('/profil', [guestController::class, 'profil']);
 Route::get('/pelayanan', function () {
     return view('pelayanan');
 });
@@ -52,7 +51,7 @@ Route::middleware(['auth'])->group(function () {
 
 
     // article
-    Route::get('    /article', [ArticleController::class, 'show']);
+    Route::get('/article', [ArticleController::class, 'show']);
     Route::get('/article/add', [ArticleController::class, 'addView'])->middleware('admin');
     Route::post('/article/add', [ArticleController::class, 'add'])->middleware('admin');
     Route::get('/article/{id}', [ArticleController::class, 'detail']);
@@ -98,7 +97,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/user/add', [userController::class, 'add']);
         Route::get('/user/update/{id}', [userController::class, 'updateView']);
         Route::put('/user/update/{id}', [userController::class, 'update']);
-        Route::get('/user/update/password/{id}', function (){
+        Route::get('/user/update/password/{id}', function () {
             return view('user.changePass');
         });
         Route::post('/user/update/password/{id}', [userController::class, 'changePass']);
@@ -107,7 +106,10 @@ Route::middleware(['auth'])->group(function () {
 
 
     Route::get('/test', function () {
-        dd(Auth::user()->role_id);
+        return view('layouts.main', [
+            'lkks' => Lkk::where('role_id', '=', 1)->get(),
+            'fks' => Lkk::where('role_id', '=', 2)->get()
+        ]);
     });
 });
 
@@ -115,4 +117,4 @@ Route::get('/testfeed', function () {
     return view('testfeed');
 });
 Route::post('/feedback', [FeedController::class, 'add'])->middleware('throttle:feedback');
-Route::get('/umkm/user', [umkmController::class, 'user']);
+Route::get('/umkm-ngampel', [umkmController::class, 'user']);
