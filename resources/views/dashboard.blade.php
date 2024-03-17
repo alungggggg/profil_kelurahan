@@ -1,3 +1,4 @@
+
 @extends('layouts.main')
 
 @section('title', 'Beranda')
@@ -325,3 +326,4 @@
 </div>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1976.5011412398067!2d111.99479688462607!3d-7.7895813068743385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78512bc80409f5%3A0x1955aefff12bfbee!2sKantor%20Kelurahan%20Ngampel!5e0!3m2!1sid!2sid!4v1710143158328!5m2!1sid!2sid" width="100%" height="380" style="border:0;" allowfullscreen></iframe>
 @endsection
+

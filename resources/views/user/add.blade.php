@@ -23,6 +23,7 @@
         @error('password')
             <div class="form-text">{{ $message }}</div>
         @enderror
+        <label for="">LKK / Forum Kemasyarakatan</label>
         <select name="lkk">
             @foreach ($lkks as $lkk)
                 <option value="{{ $lkk->id }}" @if ($lkk->id == old('lkk')) selected @endif>

@@ -17,8 +17,8 @@
         @error('namaToko')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <img src="{{ asset($toko['image']) }}" alt="" style="width:200px;">
-        <input type="file" name="image">
+        <img src="{{ asset($toko['image']) }}" alt="" id="preview" style="width:200px;">
+        <input type="file" name="image" id="img">
         @error('image')
             <div class="form-text">{{ $message }}</div>
         @enderror
@@ -36,6 +36,22 @@
         @enderror
         <button type="submit">SUBMIT</button>
     </form>
+    @push('scripts')
+        <script>
+            const reader = new FileReader();
+            const fileInput = document.getElementById("img");
+            const img = document.getElementById("preview");
+            reader.onload = e => {
+                img.src = e.target.result;
+            }
+            fileInput.addEventListener('change', e => {
+                const f = e.target.files[0];
+                reader.readAsDataURL(f);
+            })
+        </script>
+    @endpush
+    @stack('scripts')
 </body>
+
 
 </html>

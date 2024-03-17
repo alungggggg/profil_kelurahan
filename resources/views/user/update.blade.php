@@ -20,6 +20,9 @@
         @error('email')
             <div class="form-text">{{ $message }}</div>
         @enderror
+        <label for="">
+            LKK/Forum Kemasyarakatan
+        </label>
         <select name="lkk">
             @foreach ($lkks as $lkk)
                 <option value="{{ $lkk->id }}" @if ($user->lkk_id == $lkk->id) selected @endif>

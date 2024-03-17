@@ -12,6 +12,7 @@ class ArticleController extends Controller
 {
     public function updateView($id)
     {
+
         return view('article.update', ['article' => Article::findOrFail($id)]);
     }
     public function update(Request $request, $id)
@@ -36,9 +37,9 @@ class ArticleController extends Controller
             $article->thumbnail = $path . $filename;
         }
         $article->title = $request->title;
-        $article->thumbnail = $path . $filename;
         $article->content = $request->description;
         $article->save();
+        return redirect()->intended('/article')->with('message', 'Artikel berhasil perbarui!');
     }
     public function addView()
     {
@@ -67,14 +68,39 @@ class ArticleController extends Controller
             'lkk_id' => Auth::user()->lkk_id,
             'content' => $request->description,
         ]);
+        return redirect()->intended('/article')->with('message', 'Artikel berhasil dibuat!');
     }
 
     public function detail($id)
     {
         return view('article/detail', ['article' => Article::findOrFail($id)]);
     }
-    public function show()
+    public function show(Request $request)
     {
-        return view('article.index', ['articles' => Article::all()]);
+        if (Auth::user()->role_id == 2) {
+            $data = [
+                'request' => $request->search,
+                'articles' => Article::paginate(5)
+            ];
+            if ($request->has('search')) {
+                $data = [
+                    'articles' => Article::where('title', 'LIKE', '%' . $request->search . '%')->paginate(5),
+                    'request' => $request->search
+                ];
+            }
+        } else if (Auth::user()->role_id == 1) {
+            $data = [
+                'request' => $request->search,
+                'articles' => Article::where('lkk_id', '=', Auth::user()->lkk_id)->paginate(5)
+            ];
+            if ($request->has('search')) {
+                $data = [
+                    'articles' => Article::where('lkk_id', '=', Auth::user()->lkk_id)->where('title', 'LIKE', '%' . $request->search . '%')->paginate(5),
+                    'request' => $request->search
+                ];
+            }
+        }
+
+        return view('article.index', $data);
     }
 }
