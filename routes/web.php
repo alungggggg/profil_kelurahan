@@ -44,6 +44,11 @@ Route::middleware(['auth'])->group(function () {
     });
 
 
+    //pelayanan
+    Route::get('/pelayanan', function () {
+        return view('pelayanan');
+    });
+
     // article
     Route::get('/article', [ArticleController::class, 'show']);
     Route::get('/article/add', [ArticleController::class, 'addView'])->middleware('admin');
