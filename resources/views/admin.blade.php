@@ -41,7 +41,6 @@
 
 
 
-
 </head>
 
 
@@ -57,33 +56,38 @@
 
     <div class="container">
         <div class="row mt-5">
-            <div class="col-6 col-md-3 mb-4 mb-lg-5">
-                <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
-                    <img class="w-100" src="{{ asset('/asset/image/alam.jpg') }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5><a href="#" class="fables-team-name fables-second-hover-color team-name">LKK</a></h5>
-                        <p class="fables-team-pos mt-2 mb-3 italic">Lembaga</p>
+            @if (Auth::user()->role_id == 2)
+                <div class="col-6 col-md-3 mb-4 mb-lg-5">
+                    <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
+                        <img class="w-100" src="{{ asset('/asset/image/alam.jpg') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5><a href="#" class="fables-team-name fables-second-hover-color team-name">LKK</a>
+                            </h5>
+                            <p class="fables-team-pos mt-2 mb-3 italic">Lembaga</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6 col-md-3 mb-4 mb-lg-5">
-                <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
-                    <img class="w-100" src="{{ asset('/asset/image/alam.jpg') }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5><a href="#" class="fables-team-name fables-second-hover-color team-name">FK</a></h5>
-                        <p class="fables-team-pos mt-2 mb-3 italic">Forum</p>
+                <div class="col-6 col-md-3 mb-4 mb-lg-5">
+                    <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
+                        <img class="w-100" src="{{ asset('/asset/image/alam.jpg') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5><a href="#" class="fables-team-name fables-second-hover-color team-name">FK</a>
+                            </h5>
+                            <p class="fables-team-pos mt-2 mb-3 italic">Forum</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6 col-md-3 mb-4 mb-lg-5">
-                <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
-                    <img class="w-100" src="{{ asset('/asset/image/alam.jpg') }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5><a href="#" class="fables-team-name fables-second-hover-color team-name">USER</a></h5>
-                        <p class="fables-team-pos mt-2 mb-3 italic">Admin</p>
+                <div class="col-6 col-md-3 mb-4 mb-lg-5">
+                    <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
+                        <img class="w-100" src="{{ asset('/asset/image/alam.jpg') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5><a href="#" class="fables-team-name fables-second-hover-color team-name">USER</a>
+                            </h5>
+                            <p class="fables-team-pos mt-2 mb-3 italic">Admin</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endif
             <div class="col-6 col-md-3 mb-4 mb-lg-5">
                 <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
                     <img class="w-100" src="{{ asset('/asset/image/alam.jpg') }}" alt="Card image cap">

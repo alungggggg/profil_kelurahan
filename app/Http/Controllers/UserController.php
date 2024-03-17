@@ -71,7 +71,7 @@ class UserController extends Controller
         ]);
 
         $user = User::findOrFail($id);
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $user->save();
 
         return redirect()->intended('/user')->with('message', 'password berhasil diganti!');
