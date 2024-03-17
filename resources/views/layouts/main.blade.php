@@ -49,8 +49,7 @@
 
 <!-- Start Fables Navigation -->
 <div class="">
-    <div class="">
-        
+    <div class="">        
                <div class="row">
                <div class="col-12 col-lg-1">
                 <a class="navbar-brand" href="#"></a>
@@ -141,14 +140,12 @@
                                 </ul> 
                             </div>
                     </div>                    
-                </nav>
-                
-               </div>
+                </nav>                
+            </div>
     </div>
 </div>
 
 @yield('content')
-
 
 <div class="copyright fables-main-background-color mt-0 border-0 white-color">
         <ul class="nav fables-footer-social-links just-center fables-light-footer-links">
@@ -160,7 +157,6 @@
             <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
         </ul>
         <p class="mb-0">Copyright © Kelurahan Ngampel ~ PKL UNP Kediri 2024</p> 
-
 </div>
 
 <script src="{{asset('/asset/vendor/jquery/jquery-3.3.1.min.js')}}"></script>
@@ -177,8 +173,7 @@
 <script src="{{asset('/asset/vendor/fancybox-master/jquery.fancybox.min.js')}}"></script>
 <script src="{{asset('/asset/vendor/video-background/jquery.mb.YTPlayer.js')}}"></script>
 <script src="{{asset('/asset/custom/js/custom.js')}}"></script>  
-<script src="{{asset('/asset/vendor/jquery-circle-progress/circle.js')}}"></script>
- 
+<script src="{{asset('/asset/vendor/jquery-circle-progress/circle.js')}}"></script> 
     
 </body>
 </html>

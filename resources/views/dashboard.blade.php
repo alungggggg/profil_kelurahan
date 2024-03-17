@@ -82,6 +82,7 @@
                     <center><img width="70%" src="{{asset('/asset/image/kdr.png')}}"></center>
                </div>
             </div>
+
 <div class="fables-navigation fables-main-background-color py-3 py-lg-0">
     <h1 class="text-white font-29 semi-font mb-2"><center>BERITA TERKINI</center></h1>
 </div>
@@ -186,8 +187,8 @@
                     </div>
                   </div>
               </div>
-
        </div>
+
 <div class="container mb-4">
            <div class="row">
                <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center"> 
@@ -224,7 +225,8 @@
                </div>
            </div>
        </div>
-<!-- Start page content -->  
+       
+<!-- Video Youtube -->  
 <div class="container"> 
    <div id="cd-timeline" class="cd-container gallery-timeline my-4 my-md-5">
         <span class="fables-main-background-color line"></span>
@@ -288,9 +290,7 @@
         </div> <!-- cd-timeline-block -->
     </div>
 </div>  
-<!-- /End page content -->
-
-<!-- End Sambutan -->
+<!-- end video youtube -->
 
 <div class="fables-navigation fables-main-background-color py-3 py-lg-0">
     <h1 class="text-white font-29 semi-font mb-2"><center>INFORMASI</center></h1>

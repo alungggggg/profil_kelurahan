@@ -30,7 +30,6 @@
             </div>
 </div>
 
-<!-- /End Fables Navigation -->  
 <div class="fables-navigation fables-main-background-color py-3 py-lg-0">
     <h1 class="text-white font-29 semi-font"><center>STRUKTUR ORGANISASI</center></h1>
 </div>
@@ -131,6 +130,7 @@
             </div>
         </div>   
 </div>
+
 <div class="container">
             <div class="my-4 my-md-5 overflow-hidden">
                

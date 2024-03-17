@@ -4,8 +4,7 @@
 
 @section('content')
 <div class="container">
-            <div class="my-4 my-md-5 overflow-hidden">
-               
+            <div class="my-4 my-md-5 overflow-hidden">               
                 <div class="text-center mb-5 wow fadeInDown" data-wow-delay="1s">
                     <h3 class="fables-about-top-head fables-forth-text-color font-15 semi-font d-inline-block bg-white position-relative">
                         <span class="mx-4">Pelayanan</span>
@@ -79,4 +78,6 @@
                     c. Surat pengantar dari RT setempat
                     </p>
                 </div> 
+            </div> 
+        </div> 
 @endsection
