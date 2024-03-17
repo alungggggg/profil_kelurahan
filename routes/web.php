@@ -24,7 +24,10 @@ use App\Http\Controllers\guestController;
 */
 
 Route::get('/', [guestController::class, 'home'])->name('home');
-Route::get('/lembaga', [guestController::class,'lembaga']);
+Route::get('/lembaga', [guestController::class, 'lembaga']);
+Route::get('/profil', function () {
+    return view('profil');
+});
 
 // login admin
 Route::controller(UserController::class)->group(function () {
@@ -40,15 +43,11 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard');
     });
 
-    //profil
-    Route::get('/profil', function () {
-        return view('profil');
-    });
 
     // article
-    Route::get('article', [ArticleController::class, 'show']);
-    Route::get('/article/add', [ArticleController::class, 'addView']);
-    Route::post('/article/add', [ArticleController::class, 'add']);
+    Route::get('/article', [ArticleController::class, 'show']);
+    Route::get('/article/add', [ArticleController::class, 'addView'])->middleware('admin');
+    Route::post('/article/add', [ArticleController::class, 'add'])->middleware('admin');
     Route::get('/article/{id}', [ArticleController::class, 'detail']);
     Route::get('/article/update/{id}', [ArticleController::class, 'updateView']);
     Route::put('/article/update/{id}', [ArticleController::class, 'update']);
@@ -64,36 +63,40 @@ Route::middleware(['auth'])->group(function () {
     Route::put('umkm/update/{id}', [umkmController::class, 'update']);
     Route::get('umkm/delete/{id}', [umkmController::class, 'delete']);
 
-    // lkk
-    Route::get('/lkk', [lkkController::class, 'show']);
-    Route::get('/lkk/add', function () {
-        return view('lkk.add');
-    });
-    Route::post('/lkk/add', [lkkController::class, 'add']);
-    Route::get('/lkk/update/{id}', [lkkController::class, 'updateView']);
-    Route::put('/lkk/update/{id}', [lkkController::class, 'update']);
-    Route::get('/lkk/delete/{id}', [lkkController::class, 'delete']);
 
-    // fk belum
-    Route::get('/fk', [fkController::class, 'show']);
-    Route::get('/fk/add', function () {
-        return view('fk.add');
-    });
-    Route::post('/fk/add', [fkController::class, 'add']);
-    Route::get('/fk/update/{id}', [fkController::class, 'updateView']);
-    Route::put('/fk/update/{id}', [fkController::class, 'update']);
-    Route::get('/fk/delete/{id}', [fkController::class, 'delete']);
+    Route::middleware(['superAdmin'])->group(function () {
+        // lkk
+        Route::get('/lkk', [lkkController::class, 'show']);
+        Route::get('/lkk/add', function () {
+            return view('lkk.add');
+        });
+        Route::post('/lkk/add', [lkkController::class, 'add']);
+        Route::get('/lkk/update/{id}', [lkkController::class, 'updateView']);
+        Route::put('/lkk/update/{id}', [lkkController::class, 'update']);
+        Route::get('/lkk/delete/{id}', [lkkController::class, 'delete']);
 
-    // user
-    Route::get('/user', [userController::class, 'show']);
-    Route::get('/user/add', [UserController::class, 'addView']);
-    Route::post('/user/add', [userController::class, 'add']);
-    Route::get('/user/update/{id}', [userController::class, 'updateView']);
-    Route::put('/user/update/{id}', [userController::class, 'update']);
-    Route::get('/user/delete/{id}', [userController::class, 'delete']);
+        // fk
+        Route::get('/fk', [fkController::class, 'show']);
+        Route::get('/fk/add', function () {
+            return view('fk.add');
+        });
+        Route::post('/fk/add', [fkController::class, 'add']);
+        Route::get('/fk/update/{id}', [fkController::class, 'updateView']);
+        Route::put('/fk/update/{id}', [fkController::class, 'update']);
+        Route::get('/fk/delete/{id}', [fkController::class, 'delete']);
+
+        // user
+        Route::get('/user', [userController::class, 'show']);
+        Route::get('/user/add', [UserController::class, 'addView']);
+        Route::post('/user/add', [userController::class, 'add']);
+        Route::get('/user/update/{id}', [userController::class, 'updateView']);
+        Route::put('/user/update/{id}', [userController::class, 'update']);
+        Route::get('/user/delete/{id}', [userController::class, 'delete']);
+    });
+
 
     Route::get('/test', function () {
-        dd(Auth::user()->lkk_id);
+        dd(Auth::user()->role_id);
     });
 });
 
@@ -101,3 +104,4 @@ Route::get('/testfeed', function () {
     return view('testfeed');
 });
 Route::post('/feedback', [FeedController::class, 'add'])->middleware('throttle:feedback');
+Route::get('/umkm/user', [umkmController::class, 'user']);

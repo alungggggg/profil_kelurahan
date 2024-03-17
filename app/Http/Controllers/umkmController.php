@@ -83,7 +83,6 @@ class umkmController extends Controller
         $toko->save();
 
         return redirect()->intended('/umkm')->with('message', 'update berhasil!');
-
     }
     public function updateView($id)
     {
@@ -98,6 +97,19 @@ class umkmController extends Controller
         }
         $toko->delete();
         return redirect()->intended('/umkm')->with('message', 'delete berhasil!');
-
+    }
+    public function user(Request $request)
+    {
+        $data = [
+            'request' => $request->search,
+            'umkms' => Umkm::inRandomOrder()->limit(5)->get()
+        ];
+        if ($request->has('search')) {
+            $data = [
+                'umkms' => Umkm::where('nama_toko', 'LIKE', '%' . $request->search . '%')->paginate(5),
+                'request' => $request->search
+            ];
+        }
+        return view('/umkm', $data);
     }
 }
