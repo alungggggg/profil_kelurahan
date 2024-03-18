@@ -1,24 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+@section('title', 'User')
 
-<body>
+@section('content')
+<div class="container mt-5">
     @if (session('message'))
-        <div class="alert">
+        <div class="mt-4 alert alert-success" role="alert">
             {{ session('message') }}
         </div>
     @endif
-    <form action="" method="GET">
-        <input type="text" name="search" value="{{ $request }}">
-        <button type="submit">search</button>
+    <form class="col-lg-12 row" action="" method="GET">
+        <input class="col-lg-10 form-control pl-5 font-15" type="text" name="search" value="{{ $request }}" placeholder="Masukkan kata kunci pencarian">
+        <button class="col-lg-2 btn fables-second-background-color text-white" type="submit">CARI</button>
     </form>
-    <a href="/user/add">add</a>
+    <a class="mt-4 btn fables-second-background-color text-white" href="/user/add">Tambah User</a>
 
     @if ($users->count() === 0)
         tidak ada user
@@ -45,6 +40,5 @@
         {{ $users->links() }}
     @endif
 
-</body>
-
-</html>
+</div>
+@endsection

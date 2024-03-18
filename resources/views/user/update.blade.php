@@ -1,29 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+@section('title', 'Perbarui LKK')
 
-<body>
-    <form action="" method="POST">
+@section('content')
+<div class="container mt-5">
+    <form class="form-row form-group" action="" method="POST">
         @csrf
         @method('put')
-        <input type="text" name="name" value="{{ $user->name }}">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="name" value="{{ $user->name }}">
         @error('name')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <input type="email" name="email" value="{{ $user->email }}">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="email" name="email" value="{{ $user->email }}">
         @error('email')
             <div class="form-text">{{ $message }}</div>
         @enderror
         <label for="">
             LKK/Forum Kemasyarakatan
         </label>
-        <select name="lkk">
+        <select class="form-control mb-4 py-3 pl-5 font-15" name="lkk">
             @foreach ($lkks as $lkk)
                 <option value="{{ $lkk->id }}" @if ($user->lkk_id == $lkk->id) selected @endif>
                     {{ $lkk->nama_lembaga }}</option>
@@ -32,8 +27,8 @@
         @error('lkk')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <button type="submit">submit</button>
+        <button class="btn fables-second-background-color text-white" type="submit">Perbarui User</button>
     </form>
 </body>
-
-</html>
+</div>
+@endsection

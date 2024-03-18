@@ -1,42 +1,24 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>UMKM Kelurahan ngampel</title>
-</head>
+@section('title', 'UMKM Kelurahan Ngampel')
 
-<body>
+@section('content')
+<div class="container mt-5">
     @foreach ($umkms as $umkm)
         {{ $umkm->nama_toko }}<br>
         {{ $umkm->description }}<br>
         <a href="{{ $umkm->location }}">lokasi</a>
         <a href="https://wa.me/{{ $umkm->nomor }}">Beli disini</a>
     @endforeach
-</body>
 
-</html> --}}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<body>
     @if (session('message'))
-        <div class="alert">{{ session('message') }}</div>
+        <div class="mt-4 alert alert-success" role="alert">{{ session('message') }}</div>
     @endif
-    <form action="" method="GET">
-        <input type="text" name="search" value="{{ $request }}">
-        <button type="submit">search</button>
+    <form class="col-lg-12 row" action="" method="GET">
+        <input class="col-lg-10 form-control pl-5 font-15" type="text" name="search" value="{{ $request }}" placeholder="Masukkan kata kunci pencarian">
+        <button class="col-lg-2 btn fables-second-background-color text-white" type="submit">CARI</button>
     </form>
-    <a href="/umkm/add">add</a>
+    <a class="mt-4 btn fables-second-background-color text-white" href="/umkm/add">Tambah UMKM</a>
     <table>
         <tr>
             <th>nama toko</th>
@@ -63,6 +45,5 @@
     current page : {{ $umkms->currentPage() }} <br />
     total data : {{ $umkms->total() }} <br />
     {{ $umkms->links() }}
-</body>
-
-</html>
+</div>
+@endsection

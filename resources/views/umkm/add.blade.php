@@ -1,40 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>UMKM</title>
+@section('title', 'Tambah UMKM')
 
-
-</head>
-
-<body>
-    <form action="" method="POST" enctype="multipart/form-data">
+@section('content')
+<div class="container mt-5">
+    <form class="form-row form-group" action="" method="POST" enctype="multipart/form-data">
         @csrf
-        <input type="text" name="namaToko" placeholder="nama toko" value="{{ old('namaToko') }}">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="namaToko" value="{{ old('namaToko') }}" placeholder="Masukkan Nama Toko">
         @error('namaToko')
             <div class="form-text">{{ $message }}</div>
         @enderror
         <img src="" alt="" id="preview" style="width:75px">
-        <input type="file" name="image" id="img">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="file" name="image" id="img" placeholder="Masukkan Logo">
         @error('image')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <input type="text" name="description" value="{{ old('description') }}">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="description" value="{{ old('description') }}" placeholder="Masukkan Deskripsi">
         @error('description')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <input type="text" name="location" value="{{ old('location') }}">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="location" value="{{ old('location') }}" placeholder="Masukkan Lokasi Toko">
         @error('location')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <input type="text" name="nomor" value="{{ old('nomor') }}">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="nomor" value="{{ old('nomor') }}" placeholder="Masukkan No. Telephon">
         @error('location')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <button type="submit">SUBMIT</button>
+        <button class="btn fables-second-background-color text-white" type="submit">Tambah UMKM</button>
     </form>
     @push('scripts')
         <script>
@@ -51,7 +44,5 @@
         </script>
     @endpush
     @stack('scripts')
-
-</body>
-
-</html>
+</div>
+@endsection
