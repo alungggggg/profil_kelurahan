@@ -17,8 +17,8 @@
         @error('title')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <img src="{{ asset($article->thumbnail) }}" alt="" style="width: 200px">
-        <input type="file" name="thumbnail">
+        <img src="{{ asset($article->thumbnail) }}" alt="" id="preview" style="width: 200px">
+        <input type="file" name="thumbnail" id="thumbnail">
         @error('thumbnail')
             <div class="form-text">{{ $message }}</div>
         @enderror
@@ -37,6 +37,16 @@
             .catch(error => {
                 console.error(error);
             });
+        const reader = new FileReader();
+        const fileInput = document.getElementById("thumbnail");
+        const img = document.getElementById("preview");
+        reader.onload = e => {
+            img.src = e.target.result;
+        }
+        fileInput.addEventListener('change', e => {
+            const f = e.target.files[0];
+            reader.readAsDataURL(f);
+        })
     </script>
 </body>
 

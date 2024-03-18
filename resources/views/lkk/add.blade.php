@@ -15,7 +15,8 @@
         @error('nama_lembaga')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <input type="file" name="logo">
+        <img src="" alt="" id="preview" style="width:75px">
+        <input type="file" name="logo" id="logo">
         @error('logo')
             <div class="form-text">{{ $message }}</div>
         @enderror
@@ -26,6 +27,22 @@
 
         <button type="submit">submit</button>
     </form>
+
+    @push('scripts')
+        <script>
+            const reader = new FileReader();
+            const fileInput = document.getElementById("logo");
+            const img = document.getElementById("preview");
+            reader.onload = e => {
+                img.src = e.target.result;
+            }
+            fileInput.addEventListener('change', e => {
+                const f = e.target.files[0];
+                reader.readAsDataURL(f);
+            })
+        </script>
+    @endpush
+    @stack('scripts')
 </body>
 
 </html>

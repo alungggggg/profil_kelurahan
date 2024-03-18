@@ -9,11 +9,21 @@ use Illuminate\Support\Facades\File;
 class fkController extends Controller
 {
     //
-    public function show()
+    public function show(Request $request)
     {
-        // dd(Lkk::where('role_id', '=', 2)->get());
-        return view('fk.index', ['fks' => Lkk::where('role_id', '=', 2)->get()]);
+        $data = [
+            'request' => $request->search,
+            'fks' => Lkk::where('role_id', '=', 2)->paginate(5)
+        ];
+        if ($request->has('search')) {
+            $data = [
+                'fks' => Lkk::where('nama_lembaga', 'LIKE', '%' . $request->search . '%')->where('role_id', '=', 2)->paginate(5),
+                'request' => $request->search
+            ];
+        }
+        return view('fk.index', $data);
     }
+
     public function add(Request $request)
     {
         $request->validate([
@@ -25,7 +35,7 @@ class fkController extends Controller
         $file = $request->file('logo');
         $extention = $file->getClientOriginalExtension();
         $filename = time() . '.' . $extention;
-        $path = 'uploads/lkk/';
+        $path = 'uploads/fk/';
         $file->move($path, $filename);
 
         Lkk::create([
@@ -34,6 +44,8 @@ class fkController extends Controller
             'description' => $request->description,
             'role_id' => 2
         ]);
+        return redirect()->intended('/fk')->with('message', 'forum kemasyarakatan berhasil dibuat!');
+
     }
 
     public function updateView($id)
@@ -58,16 +70,18 @@ class fkController extends Controller
             $file = $request->file('logo');
             $extention = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extention;
-            $path = 'uploads/lkk/';
+            $path = 'uploads/fk/';
             $file->move($path, $filename);
-            if (File::exists($fk->image)) {
-                File::delete($fk->image);
+            if (File::exists($fk->logo)) {
+                File::delete($fk->logo);
             }
             $fk->logo = $path . $filename;
         }
         $fk->nama_lembaga = $request->nama_lembaga;
         $fk->description = $request->description;
         $fk->save();
+        return redirect()->intended('/fk')->with('message', 'forum kemasyarakatan berhasil diupdate!');
+
     }
     public function delete($id)
     {
@@ -75,9 +89,12 @@ class fkController extends Controller
         if ($fk->role_id != 2) {
             abort(404);
         }
-        if (File::exists($fk->image)) {
-            File::delete($fk->image);
+        if (File::exists($fk->logo)) {
+            File::delete($fk->logo);
         }
         $fk->delete();
+
+        return redirect()->intended('/fk')->with('message', 'forum kemasyarakatan berhasil dihapus!');
+
     }
 }

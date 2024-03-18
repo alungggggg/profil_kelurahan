@@ -9,10 +9,21 @@ use Illuminate\Support\Facades\File;
 
 class umkmController extends Controller
 {
-    //
-    public function show()
+
+    public function show(Request $request)
     {
-        return view('/umkm/read', ['umkms' => Umkm::all()]);
+        $data = [
+            'request' => $request->search,
+            'umkms' => Umkm::paginate(5)
+        ];
+        if ($request->has('search')) {
+            $data = [
+                'umkms' => Umkm::where('nama_toko', 'LIKE', '%' . $request->search . '%')->paginate(5),
+                'request' => $request->search
+            ];
+        }
+
+        return view('/umkm/read', $data);
     }
     public function add(Request $request)
     {
@@ -38,6 +49,7 @@ class umkmController extends Controller
             'location' => $request->location,
             'nomor' => $request->nomor,
         ]);
+        return redirect()->intended('/umkm')->with('message', 'UMKM berhasil dibuat!');
     }
     public function update(Request $request, $id)
     {
@@ -69,6 +81,8 @@ class umkmController extends Controller
         $toko->nomor = $request->nomor;
 
         $toko->save();
+
+        return redirect()->intended('/umkm')->with('message', 'update berhasil!');
     }
     public function updateView($id)
     {
@@ -82,5 +96,20 @@ class umkmController extends Controller
             File::delete($toko->image);
         }
         $toko->delete();
+        return redirect()->intended('/umkm')->with('message', 'delete berhasil!');
+    }
+    public function user(Request $request)
+    {
+        $data = [
+            'request' => $request->search,
+            'umkms' => Umkm::inRandomOrder()->limit(5)->get()
+        ];
+        if ($request->has('search')) {
+            $data = [
+                'umkms' => Umkm::where('nama_toko', 'LIKE', '%' . $request->search . '%')->paginate(5),
+                'request' => $request->search
+            ];
+        }
+        return view('/umkm', $data);
     }
 }

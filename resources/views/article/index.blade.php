@@ -9,17 +9,58 @@
 </head>
 
 <body>
-    <ul>
-        @foreach ($articles as $article)
-            <li>
-                <div class="title">
-                    {{ $article->title }}
-                </div>
-                <a href="/article/update/{{ $article->id }}">update</a>
-                <a href="/article/delete/{{ $article->id }}">delete</a>
-            </li>
-        @endforeach
-    </ul>
+    <form action="">
+        <input type="text" name="search" value="{{ $request }}">
+        <button type="submit">search</button>
+    </form>
+    @if (session('message'))
+        <div class="alert">{{ session('message') }}</div>
+    @endif
+    <a href="/article/add">add</a>
+    @if ($articles->count() === 0)
+        tidak ada artikel
+    @else
+        <table>
+            <tr>
+                <th>
+                    judul
+                </th>
+                <th>
+                    thumbnail
+                </th>
+                <th>
+                    lkk
+                </th>
+                <th>
+                    publish at
+                </th>
+            </tr>
+            @foreach ($articles as $article)
+                <tr>
+                    <td>
+                        {{ $article->title }}
+                    </td>
+                    <td>
+                        <img src="{{ asset($article->thumbnail) }}" style="width:100px">
+                    </td>
+                    <td>
+                        {{ $article->lkk['nama_lembaga'] }}
+                    </td>
+                    <td>
+                        {{ $article->created_at }}
+                    </td>
+
+                    <td>
+                        <a href="/article/update/{{ $article->id }}">update</a>
+                        <a href="/article/delete/{{ $article->id }}">delete</a>
+                    </td>
+                </tr>
+            @endforeach
+        </table>
+        current page : {{ $articles->currentPage() }} <br />
+        total data : {{ $articles->total() }} <br />
+        {{ $articles->links() }}
+    @endif
 
 </body>
 
