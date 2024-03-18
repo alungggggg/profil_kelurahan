@@ -48,7 +48,7 @@
 </div>
 
 <!-- Start Fables Navigation -->
-<div class="">
+<div class="navbarr">
     <div class="">        
                <div class="row">
                <div class="col-12 col-lg-1">
@@ -72,9 +72,9 @@
                                             Beranda
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                            <li><a class="dropdown-item" href="/dashboard">Aplikasi Online Kediri</a></li>
-                                            <li><a class="dropdown-item" href="/dashboard">Statistik Kependudukan</a></li>
-                                            <li><a class="dropdown-item" href="/dashboard">Informasi Lembaga</a></li>
+                                            <li><a class="dropdown-item" href="/dashboard#aplikasi">Aplikasi Online Kediri</a></li>
+                                            <li><a class="dropdown-item" href="/dashboard#statistik">Statistik Kependudukan</a></li>
+                                            <li><a class="dropdown-item" href="/dashboard#informasi">Informasi Lembaga</a></li>
                                         </ul>
                                     </li>
 
