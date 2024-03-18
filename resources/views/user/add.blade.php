@@ -19,10 +19,15 @@
             <div class="form-text">{{ $message }}</div>
         @enderror
         <label for="">LKK / Forum Kemasyarakatan</label>
-        <select class="form-control mb-4 py-3 pl-5 font-15" name="lkk">
+        <select name="lkk">
             @foreach ($lkks as $lkk)
                 <option value="{{ $lkk->id }}" @if ($lkk->id == old('lkk')) selected @endif>
                     {{ $lkk->nama_lembaga }}</option>
+            @endforeach
+            <option disabled>Forum Kemasyarakatan</option>
+            @foreach ($lkks->where('role_id', '=', 2) as $fk)
+                <option value="{{ $fk->id }}" @if ($fk->id == old('lkk')) selected @endif>
+                    {{ $fk->nama_lembaga }}</option>
             @endforeach
         </select>
         @error('lkk')
