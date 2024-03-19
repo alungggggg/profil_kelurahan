@@ -42,7 +42,10 @@ Route::controller(UserController::class)->group(function () {
 // menu admin
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('dashboard', [
+            'lkks' => Lkk::where('role_id', '=', 1)->get(),
+            'fks' => Lkk::where('role_id', '=', 2)->get(),
+        ]);
     });
 
     Route::get('/admin', function () {
