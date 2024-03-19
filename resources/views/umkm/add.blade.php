@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.mainadmin')
 
 @section('title', 'Tambah UMKM')
 

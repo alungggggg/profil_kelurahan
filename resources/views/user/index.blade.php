@@ -1,8 +1,4 @@
-@extends('layouts.main')
 
-@section('title', 'User')
-
-@section('content')
 <div class="container mt-5">
     @if (session('message'))
         <div class="mt-4 alert alert-success" role="alert">
@@ -42,4 +38,3 @@
     @endif
 
 </div>
-@endsection

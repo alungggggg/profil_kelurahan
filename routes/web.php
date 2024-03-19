@@ -28,7 +28,11 @@ Route::get('/', [guestController::class, 'home'])->name('home');
 Route::get('/lembaga', [guestController::class, 'lembaga']);
 Route::get('/profil', [guestController::class, 'profil']);
 Route::get('/pelayanan', function () {
-    return view('pelayanan');
+    return view('pelayanan', [
+        'lkks' => Lkk::where('role_id', '=', 1)->get(),
+        'fks' => Lkk::where('role_id', '=', 2)->get(),
+    ]);
+
 });
 
 // login admin
