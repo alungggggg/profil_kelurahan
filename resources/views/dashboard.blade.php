@@ -57,7 +57,7 @@
                </div>
             </div>
 
-            <center><img width="50%" src="{{asset('/asset/image/apk.png')}}" class="rotateOut-effect mb-4 wow fadeInUpBig" data-wow-duration="4s"></center>
+            <center><img id="aplikasi" width="50%" src="{{asset('/asset/image/apk.png')}}" class="rotateOut-effect mb-4 wow fadeInUpBig" data-wow-duration="4s"></center>
        </div>
 <!-- End Foto -->
 
@@ -153,7 +153,7 @@
 </div>
 
 <div class="fables-navigation fables-main-background-color py-3 py-lg-0 mb-4">
-    <h1 class="text-white font-29 semi-font mb-2"><center>STATISTIK KELURAHAN</center></h1>
+    <h1 id="statistik" class="text-white font-29 semi-font mb-2"><center>STATISTIK KELURAHAN</center></h1>
 </div>
 <div class="row row py-4 py-lg-5">
               <div class="col-6 col-md-3 text-center">
@@ -294,7 +294,7 @@
 <!-- end video youtube -->
 
 <div class="fables-navigation fables-main-background-color py-3 py-lg-0">
-    <h1 class="text-white font-29 semi-font mb-2"><center>INFORMASI</center></h1>
+    <h1 id="informasi" class="text-white font-29 semi-font mb-2"><center>INFORMASI</center></h1>
 </div>
 <div class="container">
 <div class="row overflow-hidden">
