@@ -1,21 +1,18 @@
-<html lang="en">
+@extends('layouts.mainadmin')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-</head>
+@section('title', 'Tambah Artikel')
 
-<body>
-    <form action="" method="post" enctype="multipart/form-data">
+@section('content')
+<div class="container mt-5">
+    <form class="form-row form-group" action="" method="post" enctype="multipart/form-data">
         @csrf
-        <input class="form-control" type="text" placeholder="title" name="title" aria-label="default input example"
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" placeholder="Masukkan Judul" name="title" aria-label="default input example"
             value="{{ old('title') }}">
         @error('title')
             <div class="form-text">{{ $message }}</div>
         @enderror
         <img src="" id="preview" alt="" width="75px">
-        <input type="file" name="thumbnail" id="thumbnail">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="file" name="thumbnail" id="thumbnail">
         @error('thumbnail')
             <div class="form-text">{{ $message }}</div>
         @enderror
@@ -23,7 +20,7 @@
         @error('description')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <button type="submit">SUBMIT</button>
+        <button class="btn fables-second-background-color text-white" type="submit">Tambah Artikel</button>
     </form>
     <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
     <script>
@@ -43,6 +40,5 @@
             reader.readAsDataURL(f);
         })
     </script>
-</body>
-
-</html>
+</div>
+@endsection

@@ -122,18 +122,6 @@
 
     @yield('content')
 
-    <div class="copyright fables-main-background-color mt-0 border-0 white-color">
-        <ul class="nav fables-footer-social-links just-center fables-light-footer-links">
-            <li><a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-pinterest-square"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-        </ul>
-        <p class="mb-0">Copyright © Kelurahan Ngampel ~ PKL UNP Kediri 2024</p>
-    </div>
-
     <script src="{{ asset('/asset/vendor/jquery/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('/asset/vendor/loadscreen/js/ju-loading-screen.js') }}"></script>
     <script src="{{ asset('/asset/vendor/jquery-circle-progress/circle-progress.min.js') }}"></script>
