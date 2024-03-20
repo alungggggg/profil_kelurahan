@@ -26,14 +26,17 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', [guestController::class, 'home'])->name('home');
 Route::get('/lembaga', [guestController::class, 'lembaga']);
+Route::get('/lembaga/{nama_lembaga}', [guestController::class, 'lembagaDetail']);
 Route::get('/profil', [guestController::class, 'profil']);
 Route::get('/pelayanan', function () {
     return view('pelayanan', [
         'lkks' => Lkk::where('role_id', '=', 1)->get(),
         'fks' => Lkk::where('role_id', '=', 2)->get(),
     ]);
-
 });
+Route::get('/berita', [guestController::class, 'berita']);
+Route::get('/berita/{id}', [guestController::class, 'beritaDetail']);
+
 
 // login admin
 Route::controller(UserController::class)->group(function () {
@@ -113,10 +116,7 @@ Route::middleware(['auth'])->group(function () {
 
 
     Route::get('/test', function () {
-        return view('layouts.main', [
-            'lkks' => Lkk::where('role_id', '=', 1)->get(),
-            'fks' => Lkk::where('role_id', '=', 2)->get()
-        ]);
+        return view('test');
     });
 });
 
