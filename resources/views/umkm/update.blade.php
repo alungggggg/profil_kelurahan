@@ -1,40 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.mainadmin')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Update|UMKM</title>
-</head>
+@section('title', 'Perbarui LKK')
 
-<body>
+@section('content')
+<div class="container mt-5">
     {{-- @dd($toko['image'])     --}}
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form class="form-row form-group" action="" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-        <input type="text" name="namaToko" placeholder="nama toko" value="{{ $toko['nama_toko'] }}">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="namaToko" placeholder="nama toko" value="{{ $toko['nama_toko'] }}">
         @error('namaToko')
             <div class="form-text">{{ $message }}</div>
         @enderror
         <img src="{{ asset($toko['image']) }}" alt="" id="preview" style="width:200px;">
-        <input type="file" name="image" id="img">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="file" name="image" id="img">
         @error('image')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <input type="text" name="description" placeholder="description" value="{{ $toko['description'] }}">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="description" placeholder="description" value="{{ $toko['description'] }}">
         @error('description')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <input type="text" name="location" placeholder="location" value="{{ $toko['location'] }}">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="location" placeholder="location" value="{{ $toko['location'] }}">
         @error('location')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <input type="text" name="nomor" placeholder="nomor" value="{{ $toko['nomor'] }}">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="nomor" placeholder="nomor" value="{{ $toko['nomor'] }}">
         @error('nomor')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <button type="submit">SUBMIT</button>
+        <button class="btn fables-second-background-color text-white" type="submit">Perbarui UMKM</button>
     </form>
     @push('scripts')
         <script>
@@ -52,6 +47,4 @@
     @endpush
     @stack('scripts')
 </body>
-
-
-</html>
+@endsection

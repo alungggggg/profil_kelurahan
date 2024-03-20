@@ -1,31 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.mainadmin')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+@section('title', 'Tambah Forum Kemasyarakatan')
 
-<body>
-    <form action="" method="POST" enctype="multipart/form-data">
+@section('content')
+<div class="container mt-5">
+    <form class="form-row form-group" action="" method="POST" enctype="multipart/form-data">
         @csrf
-        <input type="text" name="nama_lembaga" value="{{ old('nama_lembaga') }}">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="nama_lembaga" value="{{ old('nama_lembaga') }}" placeholder="Masukkan Nama Lembaga">
         @error('nama_lembaga')
             <div class="form-text">{{ $message }}</div>
         @enderror
         <img src="" alt="" id="preview" width="75px">
-        <input type="file" name="logo" id="logo">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="file" name="logo" id="logo" placeholder="Masukkan Logo">
         @error('logo')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <input type="text" name="description" value="{{ old('description') }}">
+        <input class="form-control mb-4 py-5 pl-5 font-15" type="text" name="description" value="{{ old('description') }}" placeholder="Masukkan Deskripsi">
         @error('description')
             <div class="form-text">{{ $message }}</div>
         @enderror
 
-        <button type="submit">submit</button>
+        <button class="btn fables-second-background-color text-white" type="submit">Tambah Forum Kemasyarakatan</button>
     </form>
     @push('scripts')
         <script>
@@ -42,6 +37,5 @@
         </script>
     @endpush
     @stack('scripts')
-</body>
-
-</html>
+</div>
+@endsection

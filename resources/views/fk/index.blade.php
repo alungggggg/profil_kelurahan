@@ -1,22 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.mainadmin')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>fk</title>
-</head>
+@section('title', 'Forum Kemasyarakatan')
 
-<body>
-
-    <form action="">
-        <input type="text" name="search" value="{{ $request }}">
-        <button type="submit">search</button>
+@section('content')
+<div class="container mt-5">
+    <form class="col-lg-12 row" action="">
+        <input class="col-lg-10 form-control pl-5 font-15" type="text" name="search" value="{{ $request }}" placeholder="Masukkan kata kunci pencarian">
+        <button class="col-lg-2 btn fables-second-background-color text-white" type="submit">CARI</button>
     </form>
-    <a href="/fk/add">add</a>
+    <a class="mt-4 btn fables-second-background-color text-white" href="/fk/add">Tambah Forum Kemasyarakatan</a>
     @if (session('message'))
-        <div class="alert">{{ session('message') }}</div>
+        <div class="mt-4 alert alert-success" role="alert">{{ session('message') }}</div>
     @endif
     @if ($fks->count() === 0)
         tidak ada forum kemasyarakatan
@@ -55,7 +49,5 @@
         total data : {{ $fks->total() }} <br />
         {{ $fks->links() }}
     @endif
-
-</body>
-
-</html>
+</div>
+@endsection
