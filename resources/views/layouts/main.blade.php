@@ -85,9 +85,9 @@
                                             Profil
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                            <li><a class="dropdown-item" href="/profil">Visi Misi</a></li>
-                                            <li><a class="dropdown-item" href="/profil">Anggota</a></li>
-                                            <li><a class="dropdown-item" href="/profil">Kontak</a></li>
+                                            <li><a class="dropdown-item" href="/profil#visimisi">Visi Misi</a></li>
+                                            <li><a class="dropdown-item" href="/profil#anggota">Anggota</a></li>
+                                            <li><a class="dropdown-item" href="/profil#kontak">Kontak</a></li>
                                         </ul>
                                     </li>
 
@@ -120,11 +120,11 @@
                                             Pelayanan
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                            <li><a class="dropdown-item" href="/pelayanan">Surat Keterangan</a></li>
-                                            <li><a class="dropdown-item" href="/pelayanan">Surat Kelahiran</a></li>
-                                            <li><a class="dropdown-item" href="/pelayanan">Surat Kematian</a></li>
-                                            <li><a class="dropdown-item" href="/pelayanan">Surat Pindah</a></li>
-                                            <li><a class="dropdown-item" href="/pelayanan">KTP (Baru)</a></li>
+                                            <li><a class="dropdown-item" href="/pelayanan#suratketerangan">Surat Keterangan</a></li>
+                                            <li><a class="dropdown-item" href="/pelayanan#aktakelahiran">Surat Kelahiran</a></li>
+                                            <li><a class="dropdown-item" href="/pelayanan#aktakematian">Surat Kematian</a></li>
+                                            <li><a class="dropdown-item" href="/pelayanan#pindah">Surat Pindah</a></li>
+                                            <li><a class="dropdown-item" href="/pelayanan#ktp">KTP (Baru)</a></li>
                                         </ul>
                                     </li>
 

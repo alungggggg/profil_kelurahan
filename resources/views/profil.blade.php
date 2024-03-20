@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
 <div class="row">
-                  <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 mt-4 mt-xl-5">
+                  <div id="visimisi" class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 mt-4 mt-xl-5">
                       <h2 class="fables-second-text-color font-20 mb-3 semi-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis egestas nisl vel faucibus</h2>
                       <p class="fables-forth-text-color font-14">
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis egestas nisl vel faucibus. Pellentesque ac dapibus orci. In aliquam nisi at est posuere ornare. Aliquam scelerisque magna a turpis mollis, eu interdum enim commodo. In quis tellus consequat, vehicula nunc pretium, gravida mauris. In commodo convallis massa, sit amet gravida erat dictum vitae. Etiam sollicitudin leo ut quam egestas, ullamcorper placerat nunc facilisis. Nunc iaculis, lorem euismod euismod venenatis, magna leo euismod felis, et laoreet velit lacus ac nisl lorem euismod euismod venenatis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis egestas nisl vel faucibus. Pellentesque ac dapibus orci. In aliquam nisi at est posuere ornare
@@ -31,7 +31,7 @@
 </div>
 
 <div class="fables-navigation fables-main-background-color py-3 py-lg-0">
-    <h1 class="text-white font-29 semi-font"><center>STRUKTUR ORGANISASI</center></h1>
+    <h1 id="anggota" class="text-white font-29 semi-font"><center>STRUKTUR ORGANISASI</center></h1>
 </div>
 <div class="container">
 <div class="row mt-5">
@@ -74,7 +74,7 @@
         </div>   
 
         <div class="row">
-            <div class="col-6 col-md-2 mb-4 mb-lg-5">
+            <div class="col-6 col-md-3 mb-4 mb-lg-5">
                 <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
                   <img class="w-100" src="{{asset('/asset/image/foto.jpg')}}" alt="Card image cap">
                   <div class="card-body">
@@ -83,7 +83,7 @@
                   </div>
                 </div>
             </div>
-            <div class="col-6 col-md-2 mb-4 mb-lg-5">
+            <div class="col-6 col-md-3 mb-4 mb-lg-5">
                 <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
                   <img class="w-100" src="{{asset('/asset/image/foto.jpg')}}" alt="Card image cap">
                   <div class="card-body">
@@ -92,7 +92,7 @@
                   </div>
                 </div>
             </div>
-            <div class="col-6 col-md-2 mb-4 mb-lg-5">
+            <div class="col-6 col-md-3 mb-4 mb-lg-5">
                 <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
                   <img class="w-100" src="{{asset('/asset/image/foto.jpg')}}" alt="Card image cap">
                   <div class="card-body">
@@ -101,25 +101,7 @@
                   </div>
                 </div>
             </div>
-            <div class="col-6 col-md-2 mb-4 mb-lg-5">
-                <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
-                  <img class="w-100" src="{{asset('/asset/image/foto.jpg')}}" alt="Card image cap">
-                  <div class="card-body">
-                    <h5><a href="#" class="fables-team-name fables-second-hover-color team-name">JOHN MARTIN</a></h5>
-                    <p class="fables-team-pos mt-2 mb-3 italic">Programmer</p> 
-                  </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-2 mb-4 mb-lg-5">
-                <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
-                  <img class="w-100" src="{{asset('/asset/image/foto.jpg')}}" alt="Card image cap">
-                  <div class="card-body">
-                    <h5><a href="#" class="fables-team-name fables-second-hover-color team-name">JOHN MARTIN</a></h5>
-                    <p class="fables-team-pos mt-2 mb-3 italic">Programmer</p> 
-                  </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-2 mb-4 mb-lg-5">
+            <div class="col-6 col-md-3 mb-4 mb-lg-5">
                 <div class="card fables-team-block fables-team-data-hover fables-second-border-color mb-4 mb-sm-0">
                   <img class="w-100" src="{{asset('/asset/image/foto.jpg')}}" alt="Card image cap">
                   <div class="card-body">
@@ -129,9 +111,10 @@
                 </div>
             </div>
         </div>   
+
 </div>
 
-<div class="container">
+<div id="kontak" class="container">
             <div class="my-4 my-md-5 overflow-hidden">
                
                 <div class="text-center mb-5 wow fadeInDown" data-wow-delay="1s">
@@ -148,18 +131,18 @@
                             <h2 class="fables-second-text-color fables-about-icon-head mt-3 mb-2 font-18 semi-font">Tanya Jawab Otomatis</h2>
                             <span class="fables-title-border fables-main-background-color"></span>
                             <div class="fables-forth-text-color mt-3 font-14">
-                                We understand the importance of approaching each work integrally and believe in the power of simple and easy communication.
+                                Dilakukan secara terperinci dan detail mengenai segala keperluan anda yang dapat melalui pesan WhatsApp Bot otomatis berikut ini.
                             </div>
 
                         </div>
                     </div>  
                     <div class="col-12 col-md-4 mb-4 mb-md-0 wow fadeInDown" data-wow-delay=".6s">
                        <div class="fables-about-icon-style">
-                           <span class="fables-iconwhatapp-icon fables-second-text-color fa-3x"></span>
+                           <a href="https://wa.me/6285854725344"><span class="fables-iconwhatapp-icon fables-second-text-color fa-3x"></span>
                            <h2 class="fables-second-text-color fables-about-icon-head mt-3 mb-2 font-18 semi-font">Klik Logo WA</h2>
-                           <span class="fables-title-border fables-main-background-color"></span>
+                           <span class="fables-title-border fables-main-background-color"></span></a>
                            <div class="fables-forth-text-color mt-3 font-14">
-                                We understand the importance of approaching each work integrally and believe in the power of simple and easy communication.
+                                Anda dapat menghubungi kami dengan cara klik logo WhatsApp tersebut untuk mendapatkan nomor yang dapat anda hubungi sekarang.
                             </div>
                         </div> 
                     </div>
@@ -169,7 +152,7 @@
                            <h2 class="fables-second-text-color fables-about-icon-head mt-3 mb-2 font-18 semi-font">Pelayanan 24 Jam</h2>
                            <span class="fables-title-border fables-main-background-color"></span>
                             <div class="fables-forth-text-color mt-3 font-14">
-                                We understand the importance of approaching each work integrally and believe in the power of simple and easy communication.
+                                ChatBot tersedia selama 24 jam, anda dapat mengajukan pertanyaan melalui nomor WhatsApp yang sudah tertera pada logo tersebut.
                             </div>
                         </div> 
                     </div>
