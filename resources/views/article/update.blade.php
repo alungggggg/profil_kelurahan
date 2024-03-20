@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.mainadmin')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+@section('title', 'Update Artikel')
 
-<body>
-    <form action="" method="post" enctype="multipart/form-data">
+@section('content')
+<div class="container mt-5">
+    <form class="form-row form-group" action="" method="post" enctype="multipart/form-data">
         @csrf
         @method('put')
-        <input class="form-control" type="text" placeholder="title" name="title" aria-label="default input example"
+        <label for="">
+            Judul Artikel
+        </label>
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" placeholder="title" name="title" aria-label="default input example"
             value="{{ $article->title }}">
         @error('title')
             <div class="form-text">{{ $message }}</div>
         @enderror
         <img src="{{ asset($article->thumbnail) }}" alt="" id="preview" style="width: 200px">
-        <input type="file" name="thumbnail" id="thumbnail">
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="file" name="thumbnail" id="thumbnail">
         @error('thumbnail')
             <div class="form-text">{{ $message }}</div>
         @enderror
@@ -28,7 +26,7 @@
         @error('description')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <button type="submit">SUBMIT</button>
+        <button class="btn fables-second-background-color text-white" type="submit">Update Artikel</button>
     </form>
     <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
     <script>
@@ -48,6 +46,5 @@
             reader.readAsDataURL(f);
         })
     </script>
-</body>
-
-</html>
+</div>
+@endsection

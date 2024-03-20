@@ -8,6 +8,9 @@
     <form class="form-row form-group" action="" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
+        <label for="">
+            Nama Toko
+        </label>
         <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="namaToko" placeholder="nama toko" value="{{ $toko['nama_toko'] }}">
         @error('namaToko')
             <div class="form-text">{{ $message }}</div>
@@ -17,14 +20,23 @@
         @error('image')
             <div class="form-text">{{ $message }}</div>
         @enderror
+        <label for="">
+            Deskripsi UMKM
+        </label>
         <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="description" placeholder="description" value="{{ $toko['description'] }}">
         @error('description')
             <div class="form-text">{{ $message }}</div>
         @enderror
+        <label for="">
+            Lokasi Toko
+        </label>
         <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="location" placeholder="location" value="{{ $toko['location'] }}">
         @error('location')
             <div class="form-text">{{ $message }}</div>
         @enderror
+        <label for="">
+            Nomor Telephon
+        </label>
         <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="nomor" placeholder="nomor" value="{{ $toko['nomor'] }}">
         @error('nomor')
             <div class="form-text">{{ $message }}</div>

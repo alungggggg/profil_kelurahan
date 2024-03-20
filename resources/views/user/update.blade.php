@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.mainadmin')
 
 @section('title', 'Perbarui LKK')
 
@@ -7,10 +7,16 @@
     <form class="form-row form-group" action="" method="POST">
         @csrf
         @method('put')
+        <label for="">
+            Masukkan Nama Pengguna
+        </label>
         <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="name" value="{{ $user->name }}">
         @error('name')
             <div class="form-text">{{ $message }}</div>
         @enderror
+        <label for="">
+            Masukkan Alamat Email
+        </label>
         <input class="form-control mb-4 py-3 pl-5 font-15" type="email" name="email" value="{{ $user->email }}">
         @error('email')
             <div class="form-text">{{ $message }}</div>

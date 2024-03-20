@@ -7,6 +7,9 @@
     <form class="form-row form-group" action="" method="post" enctype="multipart/form-data">
         @csrf
         @method('put')
+        <label for="">
+            Nama Lembaga
+        </label>
         <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="nama_lembaga" value="{{ $fk->nama_lembaga }}">
         @error('nama_lembaga')
             <div class="form-text">{{ $message }}</div>
@@ -16,6 +19,9 @@
         @error('logo')
             <div class="form-text">{{ $message }}</div>
         @enderror
+        <label for="">
+            Deskripsi
+        </label>
         <input class="form-control mb-4 py-5 pl-5 font-15" type="text" name="description" value="{{ $fk->description }}">
         @error('description')
             <div class="form-text">{{ $message }}</div>

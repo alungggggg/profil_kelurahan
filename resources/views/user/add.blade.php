@@ -1,4 +1,4 @@
-
+@extends('layouts.mainadmin')
 
 @section('title', 'Tambah User')
 

@@ -1,29 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.mainadmin')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+@section('title', 'Perbarui LKK')
 
-<body>
-    <form action="" method="POST">
+@section('content')
+<div class="container mt-5">
+    <form class="form-row form-group" action="" method="POST">
         @csrf
-        <label for="">new password</label>
-        <input type="password" name="password">
+        <label for="">New Password</label>
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="password" name="password">
         @error('password')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <label for="">confirm password</label>
-        <input type="password" name="confirmPass">
+        <label for="">Confirm Password</label>
+        <input class="form-control mb-4 py-3 pl-5 font-15" type="password" name="confirmPass">
         @error('confirmPass')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <button type="submit">submit</button>
+        <button class="btn fables-second-background-color text-white" type="submit">Simpan Perubahan Kata Sandi</button>
     </form>
 
-</body>
-
-</html>
+</div>
+@endsection
