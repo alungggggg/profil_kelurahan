@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 
 <head>
     <meta charset="utf-8">
@@ -54,7 +54,7 @@
         <div class="">
             <div class="row">
                 <div class="col-12 col-lg-1">
-                    <a class="navbar-brand" href="#"></a>            
+                    <a class="navbar-brand" href="#"></a>
                 </div>
                 <div class="col-12 col-lg-1">
                     <a class="img-responsif image-container img-fluid" href="#"><img style="width:111px;"
@@ -72,16 +72,16 @@
 
                             <ul class="navbar-nav mx-auto fables-nav">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="/dashboard" id="sub-nav1"
+                                    <a class="nav-link dropdown-toggle" href="/" id="sub-nav1"
                                         aria-haspopup="true" aria-expanded="false">
                                         Beranda
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                        <li><a class="dropdown-item" href="/dashboard#aplikasi">Aplikasi Online
+                                        <li><a class="dropdown-item" href="/#aplikasi">Aplikasi Online
                                                 Kediri</a></li>
-                                        <li><a class="dropdown-item" href="/dashboard#statistik">Statistik
+                                        <li><a class="dropdown-item" href="/#statistik">Statistik
                                                 Kependudukan</a></li>
-                                        <li><a class="dropdown-item" href="/dashboard#informasi">Informasi Lembaga</a>
+                                        <li><a class="dropdown-item" href="/#informasi">Informasi Lembaga</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -109,7 +109,7 @@
                                             <ul class="dropdown-menu">
                                                 @foreach ($lkks as $lkk)
                                                     <li><a class="dropdown-item"
-                                                            href="#">{{ $lkk->nama_lembaga }}</a>
+                                                            href="/lembaga/{{ $lkk->nama_lembaga }}">{{ $lkk->nama_lembaga }}</a>
                                                 @endforeach
                                             </ul>
                                         </li>
@@ -119,7 +119,7 @@
 
                                                 @foreach ($fks as $fk)
                                                     <li><a class="dropdown-item"
-                                                            href="#">{{ $fk->nama_lembaga }}</a>
+                                                            href="/lembaga/{{ $fk->nama_lembaga }}">{{ $fk->nama_lembaga }}</a>
                                                 @endforeach
 
                                             </ul>
@@ -133,17 +133,20 @@
                                         Pelayanan
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                        <li><a class="dropdown-item" href="/pelayanan#suratketerangan">Surat Keterangan</a></li>
-                                        <li><a class="dropdown-item" href="/pelayanan#aktakelahiran">Surat Kelahiran</a></li>
-                                        <li><a class="dropdown-item" href="/pelayanan#aktakematian">Surat Kematian</a></li>
+                                        <li><a class="dropdown-item" href="/pelayanan#suratketerangan">Surat
+                                                Keterangan</a></li>
+                                        <li><a class="dropdown-item" href="/pelayanan#aktakelahiran">Surat
+                                                Kelahiran</a></li>
+                                        <li><a class="dropdown-item" href="/pelayanan#aktakematian">Surat Kematian</a>
+                                        </li>
                                         <li><a class="dropdown-item" href="/pelayanan#pindah">Surat Pindah</a></li>
                                         <li><a class="dropdown-item" href="/pelayanan#ktp">KTP (Baru)</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/berita" id="sub-nav1"
-                                        aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link" href="/berita" id="sub-nav1" aria-haspopup="true"
+                                        aria-expanded="false">
                                         Berita
                                     </a>
                                 </li>

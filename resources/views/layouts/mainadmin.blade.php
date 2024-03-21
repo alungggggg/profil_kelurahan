@@ -57,85 +57,51 @@
                     <nav class="navbar fables-main-background-color navbar-expand-md btco-hover-menu py-lg-2">
 
 
-                                <ul class="navbar-nav mx-auto fables-nav"> 
+                        <ul class="navbar-nav mx-auto fables-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link btn-danger" href="/admin" id="sub-nav3" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Dashboard Admin
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/article" id="sub-nav1" aria-haspopup="true"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    Artikel
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="sub-nav1">
+                                    <li><a class="dropdown-item" href="/article">Data Artikel</a></li>
+                                    <li><a class="dropdown-item" href="/article/add">Tambah Artikel</a></li>
+                                </ul>
+                            </li>
+
+                            @if (Auth::user()->role_id == 2)
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link btn-danger" href="/admin" id="sub-nav3"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        Dashboard Admin
+
+                                    <a class="nav-link dropdown-toggle" href="/fk" id="sub-nav1"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Forum
                                     </a>
+                                    <ul class="dropdown-menu" aria-labelledby="sub-nav1">
+                                        <li><a class="dropdown-item" href="/fk">Forum Kemasyarakatan</a></li>
+                                        <li><a class="dropdown-item" href="/fk/add">Tambah Forum</a></li>
+                                    </ul>
                                 </li>
 
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/article" id="sub-nav1" aria-haspopup="true" aria-expanded="false">
-                                            Artikel
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                            <li><a class="dropdown-item" href="/article">Data Artikel</a></li>
-                                            <li><a class="dropdown-item" href="/article/add">Tambah Artikel</a></li>
-                                        </ul>
-                                    </li>
-
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#fablesNavDropdown" aria-controls="fablesNavDropdown" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="fables-iconmenu-icon text-white font-16"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="fablesNavDropdown">
-
-
-                            <ul class="navbar-nav mx-auto fables-nav">
-                                @if (Auth::user()->role_id == 2)
-                                    <li class="nav-item dropdown">
-
-                                        <a class="nav-link dropdown-toggle" href="/fk" id="sub-nav1" aria-haspopup="true" aria-expanded="false">
-
-                                        <a class="nav-link dropdown-toggle" href="/fk" id="sub-nav1"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Forum
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                            <li><a class="dropdown-item" href="/fk">Forum Kemasyarakatan</a></li>
-                                            <li><a class="dropdown-item" href="/fk/add">Tambah Forum</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/lkk" id="sub-nav2" aria-haspopup="true" aria-expanded="false">
-                                        <a class="nav-link dropdown-toggle" href="/lkk" id="sub-nav2"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            LKK
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                            <li><a class="dropdown-item" href="/lkk">Data Lembaga</a></li>
-                                            <li><a class="dropdown-item" href="/lkk/add">Tambah LKK</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/umkm" id="sub-nav1" aria-haspopup="true" aria-expanded="false">
-                                            UMKM
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                            <li><a class="dropdown-item" href="/umkm">Data UMKM</a></li>
-                                            <li><a class="dropdown-item" href="/umkm/add">Tambah UMKM</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/user" id="sub-nav1" aria-haspopup="true" aria-expanded="false">
-                                        <a class="nav-link dropdown-toggle" href="/user" id="sub-nav1"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            User
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                            <li><a class="dropdown-item" href="/user">Data User</a></li>
-                                            <li><a class="dropdown-item" href="/user/add">Tambah User</a></li>
-                                        </ul>
-                                    </li>
-                                @endif
-
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/lkk" id="sub-nav2"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        LKK
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="sub-nav1">
+                                        <li><a class="dropdown-item" href="/lkk">Data Lembaga</a></li>
+                                        <li><a class="dropdown-item" href="/lkk/add">Tambah LKK</a></li>
+                                    </ul>
+                                </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="/umkm" id="sub-nav1"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        aria-haspopup="true" data-toggle="dropdown" aria-expanded="false">
                                         UMKM
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="sub-nav1">
@@ -143,23 +109,31 @@
                                         <li><a class="dropdown-item" href="/umkm/add">Tambah UMKM</a></li>
                                     </ul>
                                 </li>
+
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="/article" id="sub-nav1"
+                                    <a class="nav-link dropdown-toggle" href="/user" id="sub-nav1"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Artikel
+                                        User
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                        <li><a class="dropdown-item" href="/article">Data Artikel</a></li>
-                                        <li><a class="dropdown-item" href="/article/add">Tambah Artikel</a></li>
+                                        <li><a class="dropdown-item" href="/user">Data User</a></li>
+                                        <li><a class="dropdown-item" href="/user/add">Tambah User</a></li>
                                     </ul>
                                 </li>
-                            </ul>
-                        </div>
+                            @endif
+                            <li class="nav-item dropdown">
+                                <a class="nav-link btn-danger ml-2" href="/admin" id="sub-nav3"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
                 </div>
-                </nav>
-
             </div>
+            </nav>
+
         </div>
+    </div>
     </div>
 
     @yield('content')
