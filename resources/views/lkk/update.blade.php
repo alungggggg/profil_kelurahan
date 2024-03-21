@@ -26,7 +26,7 @@
         <label for="">
             Deskripsi
         </label>
-        <input class="form-control mb-4 py-5 pl-5 font-15" type="text" name="description" value="{{ $lkk->description }}">
+        <textarea class="form-control mb-4 py-5 pl-5 font-15" type="text" name="description" value="{{ $lkk->description }}"></textarea>
         @error('description')
             <div class="form-text">{{ $message }}</div>
         @enderror
