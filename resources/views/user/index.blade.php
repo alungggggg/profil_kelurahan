@@ -38,8 +38,8 @@
                 </tr>
             @endforeach
         </table>
-        current page : {{ $users->currentPage() }} <br />
-        total data : {{ $users->total() }} <br />
+        <div class="btn btn-secondary">Current Page : {{ $users->currentPage() }} </div>
+        <div class="btn btn-secondary">Total Data : {{ $users->total() }} </div><br /><br />
         {{ $users->links() }}
     @endif
 

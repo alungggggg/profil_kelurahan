@@ -59,8 +59,8 @@
                     </tr>
                 @endforeach
             </table>
-            current page : {{ $articles->currentPage() }} <br />
-            total data : {{ $articles->total() }} <br />
+            <div class="btn btn-secondary">Current Page : {{ $articles->currentPage() }} </div>
+            <div class="btn btn-secondary">Total Data : {{ $articles->total() }} </div><br /><br />
             {{ $articles->links() }}
         @endif
 

@@ -38,8 +38,8 @@
                 </tr>
             @endforeach
         </table>
-        current page : {{ $umkms->currentPage() }} <br />
-        total data : {{ $umkms->total() }} <br />
+        <div class="btn btn-secondary">Current Page : {{ $umkms->currentPage() }} </div>
+        <div class="btn btn-secondary">Total Data : {{ $umkms->total() }} </div><br /><br />
         {{ $umkms->links() }}
     </div>
 @endsection

@@ -13,11 +13,11 @@ class fkController extends Controller
     {
         $data = [
             'request' => $request->search,
-            'fks' => Lkk::where('role_id', '=', 2)->paginate(5)
+            'fks' => Lkk::where('role_id', '=', 2)->paginate(10)
         ];
         if ($request->has('search')) {
             $data = [
-                'fks' => Lkk::where('nama_lembaga', 'LIKE', '%' . $request->search . '%')->where('role_id', '=', 2)->paginate(5),
+                'fks' => Lkk::where('nama_lembaga', 'LIKE', '%' . $request->search . '%')->where('role_id', '=', 2)->paginate(10),
                 'request' => $request->search
             ];
         }

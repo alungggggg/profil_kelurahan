@@ -41,39 +41,33 @@
 </head>
 
 <body>
-<!-- Loading Screen -->
-<div id="ju-loading-screen">
-  <div class="sk-double-bounce">
-    <div class="sk-child sk-double-bounce1"></div>
-    <div class="sk-child sk-double-bounce2"></div>
-  </div>
-</div>
+    <!-- Loading Screen -->
+    <div id="ju-loading-screen">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
 
-<!-- Start Fables Navigation -->
-<div class="navbarr">
-    <div class="">        
-               <div class="row">
-                   <div class="col-12 col-lg-12">                       
-                       <nav class="navbar fables-main-background-color navbar-expand-md btco-hover-menu py-lg-2">
-         
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fablesNavDropdown" aria-controls="fablesNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="fables-iconmenu-icon text-white font-16"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="fablesNavDropdown"> 
+    <!-- Start Fables Navigation -->
+    <div class="navbarr">
+        <div class="">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <nav class="navbar fables-main-background-color navbar-expand-md btco-hover-menu py-lg-2">
 
-                                <ul class="navbar-nav mx-auto fables-nav">   
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#fablesNavDropdown" aria-controls="fablesNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="fables-iconmenu-icon text-white font-16"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="fablesNavDropdown">
+
+                            <ul class="navbar-nav mx-auto fables-nav">
+                                @if (Auth::user()->role_id == 2)
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/article" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Artikel
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                            <li><a class="dropdown-item" href="/article">Data Artikel</a></li>
-                                            <li><a class="dropdown-item" href="/article/add">Tambah Artikel</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/fk" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="/fk" id="sub-nav1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Forum
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
@@ -83,27 +77,18 @@
                                     </li>
 
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/lkk" id="sub-nav2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="/lkk" id="sub-nav2"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             LKK
-                                        </a>                                        
+                                        </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
                                             <li><a class="dropdown-item" href="/lkk">Data Lembaga</a></li>
                                             <li><a class="dropdown-item" href="/lkk/add">Tambah LKK</a></li>
                                         </ul>
                                     </li>
-                                    
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/umkm" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            UMKM
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                            <li><a class="dropdown-item" href="/umkm">Data UMKM</a></li>
-                                            <li><a class="dropdown-item" href="/umkm/add">Tambah UMKM</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/user" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="/user" id="sub-nav1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             User
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
@@ -111,10 +96,32 @@
                                             <li><a class="dropdown-item" href="/user/add">Tambah User</a></li>
                                         </ul>
                                     </li>
-                                </ul> 
-                            </div>
-                    </div>                    
-                </nav>                
+                                @endif
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/umkm" id="sub-nav1"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        UMKM
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="sub-nav1">
+                                        <li><a class="dropdown-item" href="/umkm">Data UMKM</a></li>
+                                        <li><a class="dropdown-item" href="/umkm/add">Tambah UMKM</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/article" id="sub-nav1"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Artikel
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="sub-nav1">
+                                        <li><a class="dropdown-item" href="/article">Data Artikel</a></li>
+                                        <li><a class="dropdown-item" href="/article/add">Tambah Artikel</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+                </nav>
 
             </div>
         </div>
