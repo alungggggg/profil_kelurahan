@@ -28,9 +28,9 @@ class umkmController extends Controller
     public function add(Request $request)
     {
         $request->validate([
-            'namaToko' => 'required',
-            'image' => 'required|mimes:png,jpg,jpeg,webp',
-            'description' => 'required',
+            'namaToko' => 'required|unique:umkm,nama_toko',
+            'image' => 'required|mimes:png,jpg,jpeg,webp|max:2048',
+            'description' => 'required|min:50|max:1000',
             'location' => 'required',
             'nomor' => 'required',
         ]);
@@ -55,8 +55,8 @@ class umkmController extends Controller
     {
         $request->validate([
             'namaToko' => 'required',
-            'image' => 'mimes:png,jpg,jpeg,webp',
-            'description' => 'required',
+            'image' => 'mimes:png,jpg,jpeg,webp|max:2048',
+            'description' => 'required|min:50|max:1000',
             'location' => 'required',
             'nomor' => 'required',
         ]);

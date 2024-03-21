@@ -9,8 +9,8 @@
     <div class="nama-toko">{{ $umkm->nama_toko }}</div>
     <img src="{{ asset($umkm->image) }}" alt="">
     <div class="description">{{ $umkm->description }}</div>
-    <a href="{{ $umkm->location }}">lokasi</a>
-    <a href="wa.me/{{ $umkm->nomor }}">nomor </a>
+    <a href="{{ $umkm->location }}" target="_blank">lokasi</a>
+    <a href="https://wa.me/{{ $umkm->nomor }}" target="_blank">nomor </a>
     <br>
 @endforeach
 
