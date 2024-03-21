@@ -61,9 +61,16 @@
                             </button>
                             <div class="collapse navbar-collapse" id="fablesNavDropdown"> 
 
-                                <ul class="navbar-nav mx-auto fables-nav">   
+                                <ul class="navbar-nav mx-auto fables-nav"> 
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link btn-danger" href="/admin" id="sub-nav3"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Dashboard Admin
+                                    </a>
+                                </li>
+
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/article" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="/article" id="sub-nav1" aria-haspopup="true" aria-expanded="false">
                                             Artikel
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
@@ -73,7 +80,7 @@
                                     </li>
 
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/fk" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="/fk" id="sub-nav1" aria-haspopup="true" aria-expanded="false">
                                             Forum
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
@@ -83,7 +90,7 @@
                                     </li>
 
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/lkk" id="sub-nav2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="/lkk" id="sub-nav2" aria-haspopup="true" aria-expanded="false">
                                             LKK
                                         </a>                                        
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
@@ -93,7 +100,7 @@
                                     </li>
                                     
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/umkm" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="/umkm" id="sub-nav1" aria-haspopup="true" aria-expanded="false">
                                             UMKM
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
@@ -103,7 +110,7 @@
                                     </li>
 
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/user" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="/user" id="sub-nav1" aria-haspopup="true" aria-expanded="false">
                                             User
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">

@@ -54,14 +54,10 @@
         <div class="">
             <div class="row">
                 <div class="col-12 col-lg-1">
-                    <a class="navbar-brand" href="#"></a>
-
-
-                 
-
+                    <a class="navbar-brand" href="#"></a>            
                 </div>
                 <div class="col-12 col-lg-1">
-                    <a class="image-container img-fluid" href="#"><img width="139%"
+                    <a class="img-responsif image-container img-fluid" href="#"><img style="width:111px;"
                             src="{{ asset('/asset/image/navngampel.png') }}"></a>
                 </div>
                 <div class="col-12 col-lg-10">
@@ -76,35 +72,35 @@
 
                             <ul class="navbar-nav mx-auto fables-nav">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="/" id="sub-nav1"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="/dashboard" id="sub-nav1"
+                                        aria-haspopup="true" aria-expanded="false">
                                         Beranda
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                        <li><a class="dropdown-item" href="/#aplikasi">Aplikasi Online
+                                        <li><a class="dropdown-item" href="/dashboard#aplikasi">Aplikasi Online
                                                 Kediri</a></li>
-                                        <li><a class="dropdown-item" href="/#statistik">Statistik
+                                        <li><a class="dropdown-item" href="/dashboard#statistik">Statistik
                                                 Kependudukan</a></li>
-                                        <li><a class="dropdown-item" href="/#informasi">Informasi Lembaga</a>
+                                        <li><a class="dropdown-item" href="/dashboard#informasi">Informasi Lembaga</a>
                                         </li>
                                     </ul>
                                 </li>
 
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="/profil" id="sub-nav1"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        aria-haspopup="true" aria-expanded="false">
                                         Profil
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                        <li><a class="dropdown-item" href="/profil">Visi Misi</a></li>
-                                        <li><a class="dropdown-item" href="/profil">Anggota</a></li>
-                                        <li><a class="dropdown-item" href="/profil">Kontak</a></li>
+                                        <li><a class="dropdown-item" href="/profil#visimisi">Visi Misi</a></li>
+                                        <li><a class="dropdown-item" href="/profil#anggota">Anggota</a></li>
+                                        <li><a class="dropdown-item" href="/profil#kontak">Kontak</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="sub-nav2"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="/lembaga" id="sub-nav2"
+                                        aria-haspopup="true" aria-expanded="false">
                                         Lembaga
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="sub-nav2">
@@ -126,35 +122,35 @@
                                                             href="#">{{ $fk->nama_lembaga }}</a>
                                                 @endforeach
 
-
+                                            </ul>
                                         </li>
                                     </ul>
                                 </li>
 
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="/pelayanan" id="sub-nav1"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        aria-haspopup="true" aria-expanded="false">
                                         Pelayanan
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                        <li><a class="dropdown-item" href="/pelayanan">Surat Keterangan</a></li>
-                                        <li><a class="dropdown-item" href="/pelayanan">Surat Kelahiran</a></li>
-                                        <li><a class="dropdown-item" href="/pelayanan">Surat Kematian</a></li>
-                                        <li><a class="dropdown-item" href="/pelayanan">Surat Pindah</a></li>
-                                        <li><a class="dropdown-item" href="/pelayanan">KTP (Baru)</a></li>
+                                        <li><a class="dropdown-item" href="/pelayanan#suratketerangan">Surat Keterangan</a></li>
+                                        <li><a class="dropdown-item" href="/pelayanan#aktakelahiran">Surat Kelahiran</a></li>
+                                        <li><a class="dropdown-item" href="/pelayanan#aktakematian">Surat Kematian</a></li>
+                                        <li><a class="dropdown-item" href="/pelayanan#pindah">Surat Pindah</a></li>
+                                        <li><a class="dropdown-item" href="/pelayanan#ktp">KTP (Baru)</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/berita" id="sub-nav1" data-toggle="dropdown"
+                                    <a class="nav-link" href="/berita" id="sub-nav1"
                                         aria-haspopup="true" aria-expanded="false">
                                         Berita
                                     </a>
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link btn-danger" href="#" id="sub-nav3"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link btn-danger" href="/umkm-ngampel" id="sub-nav3"
+                                        aria-haspopup="true" aria-expanded="false">
                                         UMKM
                                     </a>
                                 </li>

@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Perbarui Forum Kemasyarakatan')
+@section('title', 'Lembaga')
 
 @section('content')
 <div class="container mt-5">

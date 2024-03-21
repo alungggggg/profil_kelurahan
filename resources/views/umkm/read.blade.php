@@ -26,7 +26,7 @@
             @foreach ($umkms as $umkm)
                 <tr>
                     <td>{{ $umkm->nama_toko }}</td>
-                    <td><img src="{{ asset($umkm->image) }}" alt="" style="width:75px"></td>
+                    <td><img src="{{ asset($umkm->image) }}" alt="" style="width:100px"></td>
                     <td>{{ $umkm->description }}</td>
                     <td>{{ $umkm->location }} </td>
                     <td>{{ $umkm->nomor }}</td>
