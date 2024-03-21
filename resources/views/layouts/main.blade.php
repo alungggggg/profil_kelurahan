@@ -70,7 +70,7 @@
 
                                 <ul class="navbar-nav mx-auto fables-nav">   
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/dashboard" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="/dashboard" id="sub-nav1" aria-haspopup="true" aria-expanded="false">
                                             Beranda
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
@@ -81,7 +81,7 @@
                                     </li>
 
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/profil" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="/profil" id="sub-nav1" aria-haspopup="true" aria-expanded="false">
                                             Profil
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
@@ -92,7 +92,7 @@
                                     </li>
 
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="sub-nav2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="#" id="sub-nav2" aria-haspopup="true" aria-expanded="false">
                                             Lembaga
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav2">
@@ -116,7 +116,7 @@
                                     </li>
                                     
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/pelayanan" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="/pelayanan" id="sub-nav1" aria-haspopup="true" aria-expanded="false">
                                             Pelayanan
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="sub-nav1">
@@ -129,13 +129,13 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link" href="#" id="sub-nav1" aria-haspopup="true" aria-expanded="false">
                                             Berita
                                         </a>
                                     </li>
 
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link btn-danger" href="#" id="sub-nav3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link btn-danger" href="/umkm-ngampel" id="sub-nav3" aria-haspopup="true" aria-expanded="false">
                                             UMKM
                                         </a>
                                     </li>
