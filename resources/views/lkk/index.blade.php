@@ -13,9 +13,8 @@
             <div class="mt-4 alert alert-success" role="alert">{{ session('message') }}</div>
         @endif
         <a class="mt-4 btn fables-second-background-color text-white mb-4" href="/lkk/add">Tambah LKK</a>
-
         @if ($lkks->count() === 0)
-            tidak ada lkk
+            <div class="alert alert-danger">tidak ada lkk</div>
         @else
             <table class="table table-responsive-lg">
                 <tr class="table-secondary">

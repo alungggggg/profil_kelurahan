@@ -16,7 +16,7 @@
             <a class="mt-4 btn fables-second-background-color text-white mb-4" href="/article/add">Tambah Artikel</a>
         @endif
         @if ($articles->count() === 0)
-            tidak ada artikel
+            <div class="alert alert-danger">tidak ada artikel</div>
         @else
             <table class="table table-responsive-lg mt-3">
                 <tr class="table-secondary">
