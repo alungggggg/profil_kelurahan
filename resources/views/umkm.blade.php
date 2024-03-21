@@ -11,15 +11,24 @@
 @if ($umkms->count() == 0)
     tidak ada umkm
 @endif
+<table class="table table-responsive-lg">
+        <tr class="table-secondary">
+            <th>Nama Toko</th>
+            <th>Logo</th>
+            <th>Desciption</th>
+            <th>Location</th>
+            <th>Nomor HP</th>
+        </tr>
 @foreach ($umkms as $umkm)
-    <div class="nama-toko">{{ $umkm->nama_toko }}</div>
-    <img src="{{ asset($umkm->image) }}" alt="">
-    <div class="description">{{ $umkm->description }}</div>
-    <a href="{{ $umkm->location }}">lokasi</a>
-    <a href="wa.me/{{ $umkm->nomor }}">nomor </a>
+<tr>
+    <td><div class="nama-toko ">{{ $umkm->nama_toko }}</div></td>
+    <td><img src="{{ asset($umkm->image) }}" alt="" style="width:100px"></td>
+    <td><div class="description">{{ $umkm->description }}</div></td>
+    <td><a class="btn fables-second-background-color text-white" href="{{ $umkm->location }}">Lokasi</a></td>
+    <td><a class="btn fables-second-background-color text-white" href="wa.me/{{ $umkm->nomor }}">Pesan Disini </a></td>
     <br>
 @endforeach
-
+</table>
 
 @if ($request != null)
     <br>current page : {{ $umkms->currentPage() }} <br />
