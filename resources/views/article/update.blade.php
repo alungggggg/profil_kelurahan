@@ -6,7 +6,8 @@
 <div class="container mt-5">
     <form class="form-row form-group" action="" method="post" enctype="multipart/form-data">
         @csrf
-        @method('put')
+        @method('put')  
+        <button class="btn fables-second-background-color text-white mb-4" type="submit">Update Artikel</button>      
         <label for="">
             Judul Artikel
         </label>
@@ -20,13 +21,12 @@
         @error('thumbnail')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <textarea id="editor" type="text" name="description">
+        <textarea class="col-lg-12 form-control mb-4 py-3 pl-5 font-15" id="editor" type="text" name="description">
             {{ $article->content }}
         </textarea>
         @error('description')
             <div class="form-text">{{ $message }}</div>
         @enderror
-        <button class="btn fables-second-background-color text-white" type="submit">Update Artikel</button>
     </form>
     <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
     <script>

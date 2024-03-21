@@ -2,16 +2,24 @@
 
 @section('title', 'Lembaga')
 @section('content')
-    <div class="title">{{ $lembaga->nama_lembaga }}</div>
-    <img src="{{ asset($lembaga->logo) }}" alt="" width="100px">
-    <div class="nama-lembaga">{{ $lembaga->nama_lembaga }}</div>
+<div class="container mt-5">
+<h1 class="font-29 semi-font fables-second-text-color"><center><div class="title">{{ $lembaga->nama_lembaga }}</div></center></h1>
+    <center><img src="{{ asset($lembaga->logo) }}" alt=""></center>
+    <div class=" mt-4 mb-1 description ">{{ $lembaga->description }}</div><br />
 
-    <div class="recomend">
-        <h3>berita terkini</h3>
-        @foreach ($articles as $article)
-            <div class="title">{{ $article->title }}</div>
-            <a href="/berita/{{ $article->title }}">link</a>
-            <img src="{{ asset($article->thumbnail) }}" alt="">
-        @endforeach
-    </div>
+
+<div class="fables-navigation fables-main-background-color py-3 py-lg-0 mt-4 mb-4 recomended">
+    <h1 class="text-white font-29 semi-font"><center>REKOMENDASI BERITA TERKINI</center></h1>
+</div>
+<div class="row wow fadeInDownBig" data-wow-duration="4s">            
+    @foreach ($articles as $articles)
+    <div class="col-12 col-sm-4 col-md-4 mb-4 mb-lg-5"> 
+              <div class="image-container zoomIn-effect">
+                  <a href="#"><img width="50%" src="{{ asset($articles->thumbnail) }}" alt="alt image text"></a> 
+              </div>
+              <center><h2 class="font-weight-bold mt-3 mb-2 font-18 semi-font"><a href="/berita/{{ $articles->title }}" class="fables-second-text-color fables-second-hover-color">{{ $articles->title }}</a></h2></center>
+            </div>   
+    @endforeach 
+</div>
+</div>
 @endsection

@@ -23,7 +23,7 @@
         <label for="">
             Deskripsi UMKM
         </label>
-        <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="description" placeholder="description" value="{{ $toko['description'] }}">
+        <textarea class="form-control mb-4 py-5 pl-5 font-15" type="text" name="description" placeholder="description" value="{{ $toko['description'] }}"></textarea>
         @error('description')
             <div class="form-text">{{ $message }}</div>
         @enderror
