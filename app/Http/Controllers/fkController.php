@@ -26,10 +26,11 @@ class fkController extends Controller
 
     public function add(Request $request)
     {
+        
         $request->validate([
-            'nama_lembaga' => 'required',
-            'logo' => 'required|mimes:png,jpg,jpeg,webp',
-            'description' => 'required',
+            'nama_lembaga' => 'required|unique:lkk',
+            'logo' => 'required|mimes:png,jpg,jpeg,webp|max:2048',
+            'description' => 'required|min:50',
         ]);
 
         $file = $request->file('logo');
@@ -60,8 +61,8 @@ class fkController extends Controller
     {
         $request->validate([
             'nama_lembaga' => 'required',
-            'logo' => 'mimes:png,jpg,jpeg,webp',
-            'description' => 'required',
+            'logo' => 'mimes:png,jpg,jpeg,webp|max:2048',
+            'description' => 'required|min:50',
         ]);
 
         $fk = lkk::findOrFail($id);

@@ -79,10 +79,10 @@ class UserController extends Controller
     public function add(Request $request)
     {
         $request->validate([
-            'name' => ['required'],
-            'email' => ['required', 'email'],
-            'lkk' => ['required'],
-            'password' => ['required'],
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'lkk' => 'required|numeric',
+            'password' => 'required|min:8',
         ]);
         // dd($request->lkk);
 
@@ -101,10 +101,11 @@ class UserController extends Controller
     }
     public function update(Request $request, $id)
     {
+
         $request->validate([
-            'name' => ['required'],
-            'email' => ['required', 'email'],
-            'lkk' => ['required']
+            'name' => 'required',
+            'email' => 'required|email',
+            'lkk' => 'required|numeric'
         ]);
         $user = User::findOrFail($id);
         $user->name = $request->name;
