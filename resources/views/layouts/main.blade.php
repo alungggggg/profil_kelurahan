@@ -56,6 +56,9 @@
                 <div class="col-12 col-lg-1">
                     <a class="navbar-brand" href="#"></a>
 
+
+                 
+
                 </div>
                 <div class="col-12 col-lg-1">
                     <a class="image-container img-fluid" href="#"><img width="139%"
@@ -117,11 +120,13 @@
                                         <li><a class="dropdown-item dropdown-toggle" href="#">Forum
                                                 Kemasyarakatan</a>
                                             <ul class="dropdown-menu">
+
                                                 @foreach ($fks as $fk)
                                                     <li><a class="dropdown-item"
                                                             href="#">{{ $fk->nama_lembaga }}</a>
                                                 @endforeach
-                                            </ul>
+
+
                                         </li>
                                     </ul>
                                 </li>

@@ -1,6 +1,12 @@
-<form action="" method="GET">
-    <input type="text" name="search" value="{{ $request }}">
-    <button type="submit">submit</button>
+@extends('layouts.mainadmin')
+
+@section('title', 'UMKM Ngampel')
+
+@section('content')
+<div class="container mt-5">
+<form class="col-lg-12 row" action="" method="GET">
+    <input class="col-lg-10 form-control pl-5 font-15" type="text" name="search" value="{{ $request }}" placeholder="Masukkan kata kunci pencarian">
+    <button class="col-lg-2 btn fables-second-background-color text-white" type="CARI">CARI</button>
 </form>
 @if ($umkms->count() == 0)
     tidak ada umkm
@@ -20,3 +26,5 @@
     total data : {{ $umkms->total() }} <br />
     {{ $umkms->links() }}
 @endif
+</div>
+@endsection
