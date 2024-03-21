@@ -21,8 +21,8 @@ class ArticleController extends Controller
 
         $request->validate([
             'title' => 'required',
-            'thumbnail' => 'mimes:png,jpg,jpeg,webp',
-            'description' => 'required'
+            'thumbnail' => 'mimes:png,jpg,jpeg,webp|max:2048',
+            'description' => 'required|min:100'
         ]);
 
         if ($request->has('thumbnail')) {
@@ -50,8 +50,8 @@ class ArticleController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'thumbnail' => 'required|mimes:png,jpg,jpeg,webp',
-            'description' => 'required'
+            'thumbnail' => 'required|mimes:png,jpg,jpeg,webp|max:2048',
+            'description' => 'required|min:100'
         ]);
 
 
