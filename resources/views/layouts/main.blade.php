@@ -57,7 +57,7 @@
                     <a class="navbar-brand" href="#"></a>            
                 </div>
                 <div class="col-12 col-lg-1">
-                    <a class="img-responsif image-container img-fluid" href="#"><img style="width:111px;"
+                    <a style="overflow:hidden;" class="img-responsif image-container img-fluid" href="#"><img style="width:111px;"
                             src="{{ asset('/asset/image/navngampel.png') }}"></a>
                 </div>
                 <div class="col-12 col-lg-10">
