@@ -14,11 +14,11 @@ class umkmController extends Controller
     {
         $data = [
             'request' => $request->search,
-            'umkms' => Umkm::paginate(5)
+            'umkms' => Umkm::paginate(10)
         ];
         if ($request->has('search')) {
             $data = [
-                'umkms' => Umkm::where('nama_toko', 'LIKE', '%' . $request->search . '%')->paginate(5),
+                'umkms' => Umkm::where('nama_toko', 'LIKE', '%' . $request->search . '%')->paginate(10),
                 'request' => $request->search
             ];
         }
@@ -32,7 +32,7 @@ class umkmController extends Controller
             'image' => 'required|mimes:png,jpg,jpeg,webp|max:2048',
             'description' => 'required|min:50|max:1000',
             'location' => 'required',
-            'nomor' => 'required',
+            'nomor' => 'required|numeric',
         ]);
 
         $file = $request->file('image');

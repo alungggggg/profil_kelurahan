@@ -16,7 +16,7 @@
             <a class="mt-4 btn fables-second-background-color text-white mb-4" href="/article/add">Tambah Artikel</a>
         @endif
         @if ($articles->count() === 0)
-            tidak ada artikel
+            <div class="alert alert-danger">tidak ada artikel</div>
         @else
             <table class="table table-responsive-lg mt-3">
                 <tr class="table-secondary">
@@ -59,8 +59,8 @@
                     </tr>
                 @endforeach
             </table>
-            current page : {{ $articles->currentPage() }} <br />
-            total data : {{ $articles->total() }} <br />
+            <div class="btn btn-secondary">Current Page : {{ $articles->currentPage() }} </div>
+            <div class="btn btn-secondary">Total Data : {{ $articles->total() }} </div><br /><br />
             {{ $articles->links() }}
         @endif
 

@@ -48,11 +48,11 @@ class UserController extends Controller
     {
         $data = [
             'request' => $request->search,
-            'users' => User::where('id', '<>', auth()->id())->paginate(5)
+            'users' => User::where('id', '<>', auth()->id())->paginate(10)
         ];
         if ($request->has('search')) {
             $data = [
-                'users' => User::where('name', 'LIKE', '%' . $request->search . '%')->paginate(5),
+                'users' => User::where('name', 'LIKE', '%' . $request->search . '%')->paginate(10),
                 'request' => $request->search
             ];
         }
