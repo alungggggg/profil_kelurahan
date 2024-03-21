@@ -1,4 +1,3 @@
-
 @extends('layouts.main')
 
 @section('title', 'Beranda')
@@ -63,15 +62,15 @@
 
 <!-- Sambutan -->
             <div class="row">
-               <div class="col-12 col-lg-3 p-0 wow fadeInLeftBig" data-wow-duration="4s">
+               <div class="col-12 col-lg-3 p-0 wow fadeInDownBig" data-wow-duration="4s">
                    <div class="">
                        <a href="#"><img src="{{asset('/asset/image/paklurah.png')}}" class="fables-logo w-100"></a>
                    </div>
                </div>
-               <div class="col-12 col-lg-9 p-0 wow fadeInRightBig" data-wow-duration="4s">
+               <div class="col-12 col-lg-9 p-0 wow fadeInDownBig" data-wow-duration="4s">
                    <div class="mb-5 image-container translate-effect-right">
                         <div class="p-6">
-                                <h1 class="text-white font-29 semi-font"><center>KATA-KATA</center></h1>
+                                <h1 class="text-white font-29 semi-font wow fadeRightDownBig" data-wow-duration="4s""><center>KATA-KATA</center></h1>
                             </div>
                         <div class="p-5 container z-index position-relative fables-navigation fables-main-background-color">
                                 <h1 class="p-1 text-white font-29 semi-font"><center>SAMBUTAN</center></h1>
@@ -227,8 +226,8 @@
            </div>
        </div>
        
-<!-- Video Youtube -->  
-<div class="container"> 
+<!-- Video Youtube   -->
+<!-- <div class="container"> 
    <div id="cd-timeline" class="cd-container gallery-timeline my-4 my-md-5">
         <span class="fables-main-background-color line"></span>
         <div class="cd-timeline-block">
@@ -257,8 +256,8 @@
                   </p>
  
                 <span class="cd-date fables-second-text-color">VIDEO</span>
-            </div> <!-- cd-timeline-content -->
-        </div> <!-- cd-timeline-block -->
+            </div> 
+        </div> 
 
         <div class="cd-timeline-block">
            <div class="cd-timeline-img"></div> 
@@ -272,8 +271,8 @@
                   </p>
  
                 <span class="cd-date fables-second-text-color">VIDEO</span>
-            </div> <!-- cd-timeline-content -->
-        </div> <!-- cd-timeline-block -->
+            </div> 
+        </div>
 
         <div class="cd-timeline-block">
             <div class="cd-timeline-img"></div> 
@@ -287,16 +286,16 @@
                   </p>
  
                 <span class="cd-date fables-second-text-color">VIDEO</span>
-            </div> <!-- cd-timeline-content -->
-        </div> <!-- cd-timeline-block -->
+            </div> 
+        </div> 
     </div>
-</div>  
+</div>   -->
 <!-- end video youtube -->
 
 <div class="fables-navigation fables-main-background-color py-3 py-lg-0">
     <h1 id="informasi" class="text-white font-29 semi-font mb-2"><center>INFORMASI</center></h1>
 </div>
-<div class="container">
+<div class="container mt-2">
 <div class="row overflow-hidden">
              <div class="col-12 col-md-4 text-center px-4 px-lg-5 my-4 my-lg-5 wow fadeInDown" data-wow-delay=".5s">
                   <div class="fables-second-border-color border fables-contact-block-border fables-rounded px-2">

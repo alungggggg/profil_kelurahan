@@ -1032,6 +1032,9 @@
 }
 }
 @media (min-width:576px) and (max-width:767px){
+.img-responsif{
+    width: 50px;
+}
 .circle-row .circles:first-child .fables-gallery-circle::before ,
 .circle-row .circles:last-child .fables-gallery-circle::after,
 .circle-row .circles:last-child .fables-gallery-circle::before{ 
