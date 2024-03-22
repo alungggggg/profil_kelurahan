@@ -73,7 +73,7 @@
             <div class="row">
                <div class="col-12 col-lg-3 p-0 wow fadeInUpBig" data-wow-duration="4s">
                    <div class="">
-                       <a href="#"><img src="{{asset('/asset/image/paklurah.png')}}" class="fables-logo w-100"></a>
+                       <a href="#"><img src="{{asset('/asset/image/paklurah1.png')}}" class="fables-logo"></a>
                    </div>
                </div>
                <div class="col-12 col-lg-9 p-0 wow fadeInUpBig" data-wow-duration="4s">
@@ -90,8 +90,8 @@
                     </div>
                     <center><a href="https://wa.me/6285175137514"><img width="100%" src="{{asset('/asset/image/kdr.png')}}"></a></center>
                </div>
-            </div>
-
+            
+</div>
     <div class="fables-navigation fables-main-background-color py-3 py-lg-0">
         <h1 class="text-white font-29 semi-font mb-2">
             <center>BERITA TERKINI</center>
@@ -99,7 +99,7 @@
     </div>
     <div class="container py-4 py-lg-5">
         <div class="fables-team my-3">
-            <div class="row wow fadeInDownBig" data-wow-duration="4s">
+            <div class="row wow fadeInUpBig" data-wow-duration="4s">
                 @foreach ($articles as $article)
                     <div class="col-12 col-sm-4 col-md-4 mb-4 mb-lg-5">
                         <div class="image-container zoomIn-effect">

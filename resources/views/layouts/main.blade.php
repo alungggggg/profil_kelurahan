@@ -50,16 +50,17 @@
     </div>
 
     <!-- Start Fables Navigation -->
-    <div class="">
-        <div class="">
-            <div class="row">
-                <div class="col-12 col-lg-1">
-                    <a style="overflow:hidden;" class="img-responsif image-container img-fluid" href="#"><img style="width:111px;"
-                            src="{{ asset('/asset/image/navngampel.png') }}"></a>
-                </div>
-                <div class="col-12 col-lg-11">
-                    <nav class="navbar fables-main-background-color navbar-expand-md btco-hover-menu py-lg-2">
-
+    <div class="fables-navigation fables-main-background-color mb-5">
+    <div class="container">
+               <div class="row">
+                
+                <div class="col-12 col-lg-12">
+                    <nav class="navbar fables-main-background-color navbar-expand-md btco-hover-menu">
+                    
+                    <a   class="navbar-brand pl-0" href="#"><img class="fables-logo" 
+                            src="{{ asset('/asset/image/navngampel2.png') }}"></a>
+                    
+                
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#fablesNavDropdown" aria-controls="fablesNavDropdown" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -158,7 +159,7 @@
                         </div>
                 </div>
                 </nav>
-
+</div>
             </div>
         </div>
     </div>
