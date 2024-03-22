@@ -123,8 +123,8 @@
                             <span class="mr-3"> {{ $article->created_at }} </span>
                         </div>
                         <p class="fables-forth-text-color font-14 mb-2">
-                            {!! substr($article->content, 0, 8) !!}...
-                            {!! $article->content !!}
+                            {!! substr($article->content, 0, 100) !!}...
+                            {{-- {!! $article->content !!} --}}
                         </p>
                         <a href="/berita/{{ $article->title }}"
                             class="btn fables-second-text-color fables-main-hover-color p-0 mt-2">
@@ -222,68 +222,68 @@
 
     <!-- Video Youtube   -->
     <!-- <div class="container">
-                                                       <div id="cd-timeline" class="cd-container gallery-timeline my-4 my-md-5">
-                                                            <span class="fables-main-background-color line"></span>
-                                                            <div class="cd-timeline-block">
-                                                                <div class="cd-timeline-img"></div>
-                                                                <div class="cd-timeline-content">
-                                                                      <a href="#"><img src="{{ asset('/asset/image/kucing.jpg') }}" alt="" class="w-100"></a>
-                                                                      <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
-                                                                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                                      </a></h2>
-                                                                      <p class="fables-forth-text-color fables-gallery-timeline-details">
-                                                                         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
-                                                                      </p>
-                                                                    <span class="cd-date fables-second-text-color">VIDEO</span>
-                                                                </div>
-                                                            </div>
+                                                                   <div id="cd-timeline" class="cd-container gallery-timeline my-4 my-md-5">
+                                                                        <span class="fables-main-background-color line"></span>
+                                                                        <div class="cd-timeline-block">
+                                                                            <div class="cd-timeline-img"></div>
+                                                                            <div class="cd-timeline-content">
+                                                                                  <a href="#"><img src="{{ asset('/asset/image/kucing.jpg') }}" alt="" class="w-100"></a>
+                                                                                  <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
+                                                                                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                                                  </a></h2>
+                                                                                  <p class="fables-forth-text-color fables-gallery-timeline-details">
+                                                                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
+                                                                                  </p>
+                                                                                <span class="cd-date fables-second-text-color">VIDEO</span>
+                                                                            </div>
+                                                                        </div>
 
-                                                            <div class="cd-timeline-block">
-                                                                <div class="cd-timeline-img"></div>
-                                                                <div class="cd-timeline-content">
-                                                                      <a href="#"><img src="{{ asset('/asset/image/kucing.jpg') }}" alt="" class="w-100"></a>
-                                                                      <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
-                                                                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                                      </a></h2>
-                                                                      <p class="fables-forth-text-color fables-gallery-timeline-details">
-                                                                         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
-                                                                      </p>
-                                                     
-                                                                    <span class="cd-date fables-second-text-color">VIDEO</span>
-                                                                </div>
-                                                            </div>
+                                                                        <div class="cd-timeline-block">
+                                                                            <div class="cd-timeline-img"></div>
+                                                                            <div class="cd-timeline-content">
+                                                                                  <a href="#"><img src="{{ asset('/asset/image/kucing.jpg') }}" alt="" class="w-100"></a>
+                                                                                  <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
+                                                                                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                                                  </a></h2>
+                                                                                  <p class="fables-forth-text-color fables-gallery-timeline-details">
+                                                                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
+                                                                                  </p>
+                                                                 
+                                                                                <span class="cd-date fables-second-text-color">VIDEO</span>
+                                                                            </div>
+                                                                        </div>
 
-                                                            <div class="cd-timeline-block">
-                                                               <div class="cd-timeline-img"></div>
-                                                                <div class="cd-timeline-content">
-                                                                      <a href="#"><img src="{{ asset('/asset/image/kucing.jpg') }}" alt="" class="w-100"></a>
-                                                                      <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
-                                                                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                                      </a></h2>
-                                                                      <p class="fables-forth-text-color fables-gallery-timeline-details">
-                                                                         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
-                                                                      </p>
-                                                     
-                                                                    <span class="cd-date fables-second-text-color">VIDEO</span>
-                                                                </div>
-                                                            </div>
+                                                                        <div class="cd-timeline-block">
+                                                                           <div class="cd-timeline-img"></div>
+                                                                            <div class="cd-timeline-content">
+                                                                                  <a href="#"><img src="{{ asset('/asset/image/kucing.jpg') }}" alt="" class="w-100"></a>
+                                                                                  <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
+                                                                                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                                                  </a></h2>
+                                                                                  <p class="fables-forth-text-color fables-gallery-timeline-details">
+                                                                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
+                                                                                  </p>
+                                                                 
+                                                                                <span class="cd-date fables-second-text-color">VIDEO</span>
+                                                                            </div>
+                                                                        </div>
 
-                                                            <div class="cd-timeline-block">
-                                                                <div class="cd-timeline-img"></div>
-                                                               <div class="cd-timeline-content">
-                                                                      <a href="#"><img src="{{ asset('/asset/image/kucing.jpg') }}" alt="" class="w-100"></a>
-                                                                      <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
-                                                                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                                      </a></h2>
-                                                                      <p class="fables-forth-text-color fables-gallery-timeline-details">
-                                                                         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
-                                                                      </p>
-                                                     
-                                                                    <span class="cd-date fables-second-text-color">VIDEO</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>   -->
+                                                                        <div class="cd-timeline-block">
+                                                                            <div class="cd-timeline-img"></div>
+                                                                           <div class="cd-timeline-content">
+                                                                                  <a href="#"><img src="{{ asset('/asset/image/kucing.jpg') }}" alt="" class="w-100"></a>
+                                                                                  <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
+                                                                                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                                                  </a></h2>
+                                                                                  <p class="fables-forth-text-color fables-gallery-timeline-details">
+                                                                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
+                                                                                  </p>
+                                                                 
+                                                                                <span class="cd-date fables-second-text-color">VIDEO</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>   -->
     <!-- end video youtube -->
 
     <div class="fables-navigation fables-main-background-color py-3 py-lg-0">
