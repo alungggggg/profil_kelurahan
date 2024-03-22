@@ -115,4 +115,13 @@ class umkmController extends Controller
         }
         return view('/umkm', $data);
     }
+    public function detail($nama_toko)
+    {
+        $data = [
+            'umkm' => Umkm::where('nama_toko', '=', $nama_toko)->first(),
+            'lkks' => Lkk::where('role_id', '=', 1)->get(),
+            'fks' => Lkk::where('role_id', '=', 2)->get()
+        ];
+        return view('umkmDetail', $data);
+    }
 }

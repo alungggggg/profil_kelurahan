@@ -36,6 +36,8 @@ Route::get('/pelayanan', function () {
 });
 Route::get('/berita', [guestController::class, 'berita']);
 Route::get('/berita/{id}', [guestController::class, 'beritaDetail']);
+Route::get('/umkm-ngampel', [umkmController::class, 'user']);
+Route::get('/umkm-ngampel/{nama_toko}', [umkmController::class, 'detail']);
 
 
 // login admin
@@ -48,26 +50,17 @@ Route::controller(UserController::class)->group(function () {
 
 // menu admin
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard', [
-            'lkks' => Lkk::where('role_id', '=', 1)->get(),
-            'fks' => Lkk::where('role_id', '=', 2)->get(),
-        ]);
-    });
-
     Route::get('/admin', function () {
         return view('admin');
     });
 
-
     // article
     Route::get('/article', [ArticleController::class, 'show']);
-    Route::get('/article/add', [ArticleController::class, 'addView'])->middleware('admin');
-    Route::post('/article/add', [ArticleController::class, 'add'])->middleware('admin');
+    Route::get('/article/add', [ArticleController::class, 'addView']);
+    Route::post('/article/add', [ArticleController::class, 'add']);
     Route::get('/article/{id}', [ArticleController::class, 'detail']);
     Route::get('/article/update/{id}', [ArticleController::class, 'updateView']);
     Route::put('/article/update/{id}', [ArticleController::class, 'update']);
-
 
     // umkm
     Route::get('/umkm', [umkmController::class, 'show']);
@@ -124,4 +117,3 @@ Route::get('/testfeed', function () {
     return view('testfeed');
 });
 Route::post('/feedback', [FeedController::class, 'add'])->middleware('throttle:feedback');
-Route::get('/umkm-ngampel', [umkmController::class, 'user']);
