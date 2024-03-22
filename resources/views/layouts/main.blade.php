@@ -50,17 +50,17 @@
     </div>
 
     <!-- Start Fables Navigation -->
-    <div class="navbarr">
+    <div class="">
         <div class="">
             <div class="row">
                 <div class="col-12 col-lg-1">
-                    <a class="navbar-brand" href="#"></a>
+                    <a class="navbar-brand" href="#"></a>            
                 </div>
                 <div class="col-12 col-lg-1">
                     <a style="overflow:hidden;" class="img-responsif image-container img-fluid" href="#"><img style="width:111px;"
                             src="{{ asset('/asset/image/navngampel.png') }}"></a>
                 </div>
-                <div class="col-12 col-lg-10">
+                <div class="col-12 col-lg-11">
                     <nav class="navbar fables-main-background-color navbar-expand-md btco-hover-menu py-lg-2">
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
