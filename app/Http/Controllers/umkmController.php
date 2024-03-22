@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Lkk;
 use App\Models\Umkm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -102,11 +103,13 @@ class umkmController extends Controller
     {
         $data = [
             'request' => $request->search,
-            'umkms' => Umkm::inRandomOrder()->limit(5)->get()
+            'umkms' => Umkm::inRandomOrder()->limit(10)->get(),
+            'lkks' => Lkk::where('role_id', '=', 1)->get(),
+            'fks' => Lkk::where('role_id', '=', 2)->get(),
         ];
         if ($request->has('search')) {
             $data = [
-                'umkms' => Umkm::where('nama_toko', 'LIKE', '%' . $request->search . '%')->paginate(5),
+                'umkms' => Umkm::where('nama_toko', 'LIKE', '%' . $request->search . '%')->paginate(10),
                 'request' => $request->search
             ];
         }

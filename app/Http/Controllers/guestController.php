@@ -13,7 +13,7 @@ class guestController extends Controller
     public function home()
     {
 
-        return view('dashboard', [
+        return view('home', [
             'lkks' => Lkk::where('role_id', '=', 1)->get(),
             'fks' => Lkk::where('role_id', '=', 2)->get(),
             'articles' => Article::all()->take(3)
@@ -51,7 +51,7 @@ class guestController extends Controller
             'lkks' => Lkk::where('role_id', '=', 1)->get(),
             'fks' => Lkk::where('role_id', '=', 2)->get(),
             'article' => $article,
-            'articles' => Article::inRandomOrder()->limit(2)->get()
+            'articles' => Article::inRandomOrder()->limit(3)->get()
         ]);
     }
     public function lembagaDetail($nama_lembaga)
@@ -64,7 +64,7 @@ class guestController extends Controller
             'lkks' => Lkk::where('role_id', '=', 1)->get(),
             'fks' => Lkk::where('role_id', '=', 2)->get(),
             'lembaga' => $lembaga,
-            'articles' => Article::inRandomOrder()->limit(2)->get()
+            'articles' => Article::inRandomOrder()->limit(3)->get()
         ]);
     }
 }
