@@ -138,7 +138,7 @@
                     </div>  
                     <div class="col-12 col-md-4 mb-4 mb-md-0 wow fadeInDown" data-wow-delay=".6s">
                        <div class="fables-about-icon-style">
-                           <a href="https://wa.me/6285854725344"><span class="fables-iconwhatapp-icon fables-second-text-color fa-3x"></span>
+                           <a href="https://wa.me/6285175137514"><span class="fables-iconwhatapp-icon fables-second-text-color fa-3x"></span>
                            <h2 class="fables-second-text-color fables-about-icon-head mt-3 mb-2 font-18 semi-font">Klik Logo WA</h2>
                            <span class="fables-title-border fables-main-background-color"></span></a>
                            <div class="fables-forth-text-color mt-3 font-14">

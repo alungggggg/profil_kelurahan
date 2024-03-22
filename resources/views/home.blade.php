@@ -62,24 +62,24 @@
 
 <!-- Sambutan -->
             <div class="row">
-               <div class="col-12 col-lg-3 p-0 wow fadeInDownBig" data-wow-duration="4s">
+               <div class="col-12 col-lg-3 p-0 wow fadeInUpBig" data-wow-duration="4s">
                    <div class="">
                        <a href="#"><img src="{{asset('/asset/image/paklurah.png')}}" class="fables-logo w-100"></a>
                    </div>
                </div>
-               <div class="col-12 col-lg-9 p-0 wow fadeInDownBig" data-wow-duration="4s">
-                   <div class="mb-5 image-container translate-effect-right">
+               <div class="col-12 col-lg-9 p-0 wow fadeInUpBig" data-wow-duration="4s">
+                   <div class="mb-2 image-container translate-effect-right">
                         <div class="p-6">
                                 <h1 class="text-white font-29 semi-font wow fadeRightDownBig" data-wow-duration="4s""><center>KATA-KATA</center></h1>
                             </div>
-                        <div class="p-5 container z-index position-relative fables-navigation fables-main-background-color">
+                        <div class="p-4 container z-index position-relative fables-navigation fables-main-background-color">
                                 <h1 class="p-1 text-white font-29 semi-font"><center>SAMBUTAN</center></h1>
                                 <div class="font-14 text-white text-md-center">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
                                 </div>
                             </div>                     
                     </div>
-                    <center><img width="70%" src="{{asset('/asset/image/kdr.png')}}"></center>
+                    <center><a href="https://wa.me/6285175137514"><img width="100%" src="{{asset('/asset/image/kdr.png')}}"></a></center>
                </div>
             </div>
 
