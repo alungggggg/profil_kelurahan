@@ -1,8 +1,9 @@
-@extends('layouts.mainadmin')
+@extends('layouts.main')
 
 @section('title', 'UMKM Ngampel')
 
 @section('content')
+
 <div class="container mt-5">
 <form class="col-lg-12 row" action="" method="GET">
     <input class="col-lg-10 form-control pl-5 font-15 mb-4" type="text" name="search" value="{{ $request }}" placeholder="Masukkan kata kunci pencarian">
@@ -41,10 +42,11 @@
      </div>
 
 
-@if ($request != null)
-    <br>current page : {{ $umkms->currentPage() }} <br />
-    total data : {{ $umkms->total() }} <br />
-    {{ $umkms->links() }}
-@endif
-</div>
+
+        @if ($request != null)
+            <br>current page : {{ $umkms->currentPage() }} <br />
+            total data : {{ $umkms->total() }} <br />
+            {{ $umkms->links() }}
+        @endif
+    </div>
 @endsection
