@@ -50,12 +50,22 @@
     </div>
 
     <!-- Start Fables Navigation -->
-    <div class="navbarr">
-        <div class="">
-            <div class="row">
+    <div class="fables-navigation fables-main-background-color mb-5">
+    <div class="container">
+               <div class="row">
+                
                 <div class="col-12 col-lg-12">
-                    <nav class="navbar fables-main-background-color navbar-expand-md btco-hover-menu py-lg-2">
-
+                    <nav class="navbar fables-main-background-color navbar-expand-md btco-hover-menu">
+                    
+                    <a   class="navbar-brand pl-0" href="#"><h1 class="text-white">INNA</h1></a>
+                    
+                
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#fablesNavDropdown" aria-controls="fablesNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="fables-iconmenu-icon text-white font-16"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="fablesNavDropdown">
 
                         <ul class="navbar-nav mx-auto fables-nav">
                             <li class="nav-item dropdown">
