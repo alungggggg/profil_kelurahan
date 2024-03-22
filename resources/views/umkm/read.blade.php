@@ -31,7 +31,7 @@
                         <td>{{ $umkm->nama_toko }}</td>
                         <td><img src="{{ asset($umkm->image) }}" alt="" style="width:75px"></td>
                         <td>{{ $umkm->description }}</td>
-                        <td>{{ $umkm->location }} </td>
+                        <td>{{ substr($umkm->location, 0, 50) }}... </td>
                         <td>{{ $umkm->nomor }}</td>
                         <td>
                             <a class="btn fables-second-background-color text-white"

@@ -45,7 +45,8 @@
                                 </p>
                                 <a class="btn fables-second-background-color text-white" href="{{ $umkm->location }}"
                                     target="_blank">Location</a>
-                                <a class="btn btn-success text-white" href="wa.me/{{ $umkm->nomor }}" target="_blank">Order
+                                <a class="btn btn-success text-white" href="https://wa.me/{{ $umkm->nomor }}"
+                                    target="_blank">Order
                                     Now!</a>
                             </div>
                         </div>

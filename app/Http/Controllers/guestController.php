@@ -16,7 +16,7 @@ class guestController extends Controller
         return view('home', [
             'lkks' => Lkk::where('role_id', '=', 1)->get(),
             'fks' => Lkk::where('role_id', '=', 2)->get(),
-            'articles' => Article::all()->take(3)
+            'articles' => Article::orderBy('id', 'DESC')->limit(3)->get()
         ]);
     }
     public function lembaga()

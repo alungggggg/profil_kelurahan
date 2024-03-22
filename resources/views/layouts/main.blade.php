@@ -50,6 +50,7 @@
     </div>
 
     <!-- Start Fables Navigation -->
+
     <div class="fables-navigation fables-main-background-color mb-5">
     <div class="container">
                <div class="row">
@@ -61,6 +62,7 @@
                             src="{{ asset('/asset/image/navngampel2.png') }}"></a>
                     
                 
+
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#fablesNavDropdown" aria-controls="fablesNavDropdown" aria-expanded="false"
                             aria-label="Toggle navigation">
