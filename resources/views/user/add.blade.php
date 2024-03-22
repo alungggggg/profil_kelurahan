@@ -25,9 +25,9 @@
                 <div class="form-text" style="color: red;">{{ $message }}</div>
             @enderror
             <label for="">LKK / Forum Kemasyarakatan</label>
-            <select  class="form-control mb-4 py-3 pl-5 font-15" name="lkk">
+            <select class="form-control mb-4 py-3 pl-5 font-15" name="lkk">
                 <option disabled>LKK</option>
-                @foreach ($lkks as $lkk)
+                @foreach ($lkks->where('role_id', '=', 1) as $lkk)
                     <option value="{{ $lkk->id }}" @if ($lkk->id == old('lkk')) selected @endif>
                         {{ $lkk->nama_lembaga }}</option>
                 @endforeach
@@ -37,7 +37,7 @@
                         {{ $fk->nama_lembaga }}</option>
                 @endforeach
             </select>
-            
+
             <button class="btn fables-second-background-color text-white" type="submit">Tambah User</button>
         </form>
     </div>
