@@ -34,6 +34,8 @@ class umkmController extends Controller
             'description' => 'required|min:10|max:1000',
             'location' => 'required',
             'nomor' => 'required|numeric',
+            'instagram' => '',
+            'facebook' => ''
         ]);
 
         $file = $request->file('image');
@@ -49,6 +51,8 @@ class umkmController extends Controller
             'description' => $request->description,
             'location' => $request->location,
             'nomor' => $request->nomor,
+            'instagram' => $request->instagram,
+            'facebook' => $request->facebook,
         ]);
         return redirect()->intended('/umkm')->with('message', 'UMKM berhasil dibuat!');
     }
@@ -60,6 +64,8 @@ class umkmController extends Controller
             'description' => 'required|min:10|max:1000',
             'location' => 'required',
             'nomor' => 'required',
+            'instagram' => '',
+            'facebook' => ''
         ]);
         $toko = Umkm::findOrFail($id);
 
@@ -80,6 +86,8 @@ class umkmController extends Controller
         $toko->description = $request->description;
         $toko->location = $request->location;
         $toko->nomor = $request->nomor;
+        $toko->instagram = $request->instagram;
+        $toko->facebook = $request->facebook;
 
         $toko->save();
 

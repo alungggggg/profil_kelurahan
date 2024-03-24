@@ -71,10 +71,10 @@ class lkkController extends Controller
             $filename = time() . '.' . $extention;
             $path = 'uploads/lkk/';
             $file->move($path, $filename);
-            if (File::exists($lkk->logo)) {
-                File::delete($lkk->logo);
-            }
-            $lkk->logo = $path . $filename;
+                if (File::exists($lkk->logo)) {
+                    File::delete($lkk->logo);
+                }
+                $lkk->logo = $path . $filename;
         }
         $lkk->nama_lembaga = $request->nama_lembaga;
         $lkk->description = $request->description;

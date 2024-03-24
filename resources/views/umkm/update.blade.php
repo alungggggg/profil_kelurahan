@@ -44,6 +44,23 @@
             @enderror
             <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="nomor" placeholder="nomor"
                 value="{{ $toko['nomor'] }}">
+
+            <label for="">
+                instagram
+            </label>
+            @error('instagram')
+                <div class="form-text col-lg-12" style="color: red; text-align: right">{{ $message }}</div>
+            @enderror
+            <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="instagram" placeholder="instagram"
+                value="{{ $toko['instagram'] }}">
+            <label for="">
+                Facebook
+            </label>
+            @error('facebook')
+                <div class="form-text col-lg-12" style="color: red; text-align: right">{{ $message }}</div>
+            @enderror
+            <input class="form-control mb-4 py-3 pl-5 font-15" type="text" name="facebook" placeholder="facebook"
+                value="{{ $toko['facebook'] }}">
             <button class="btn fables-second-background-color text-white" type="submit">Perbarui UMKM</button>
         </form>
         @push('scripts')

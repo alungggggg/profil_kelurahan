@@ -52,16 +52,16 @@
     <!-- Start Fables Navigation -->
 
     <div class="fables-navigation fables-main-background-color mb-5">
-    <div class="container">
-               <div class="row">
-                
+        <div class="container">
+            <div class="row">
+
                 <div class="col-12 col-lg-12">
                     <nav class="navbar fables-main-background-color navbar-expand-md btco-hover-menu">
-                    
-                    <a   class="navbar-brand pl-0" href="#"><img class="fables-logo" 
-                            src="{{ asset('/asset/image/navngampel2.png') }}"></a>
-                    
-                
+
+                        <a class="navbar-brand pl-0" href="#"><img class="fables-logo"
+                                src="{{ asset('/asset/image/navngampel2.png') }}"></a>
+
+
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#fablesNavDropdown" aria-controls="fablesNavDropdown" aria-expanded="false"
@@ -161,21 +161,22 @@
                         </div>
                 </div>
                 </nav>
-</div>
             </div>
         </div>
+    </div>
     </div>
 
     @yield('content')
 
     <div class="copyright fables-main-background-color mt-0 border-0 white-color">
         <ul class="nav fables-footer-social-links just-center fables-light-footer-links">
-            <li><a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-pinterest-square"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.facebook.com/KelurahanNgampel46" target="_blank"><i
+                        class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/kelurahan_ngampel/" target="_blank"><i
+                        class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/c/KelurahanNgampel" target="_blank"><i
+                        class="fab fa-youtube"></i></a></li>
+            <li><a href="https://wa.me/6285175137514" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
         </ul>
         <p class="mb-0">Copyright © Kelurahan Ngampel ~ PKL UNP Kediri 2024</p>
     </div>

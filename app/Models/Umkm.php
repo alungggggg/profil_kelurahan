@@ -11,6 +11,12 @@ class Umkm extends Model
     public $table = "umkm";
 
     protected $fillable = [
-        'nama_toko', 'description', 'image', 'location', 'nomor'
+        'nama_toko', 
+        'description', 
+        'image', 
+        'location', 
+        'nomor',
+        'instagram',
+        'facebook'
     ];
 }

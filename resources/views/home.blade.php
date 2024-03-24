@@ -3,95 +3,58 @@
 @section('title', 'Beranda')
 
 @section('content')
-    <!-- Foto -->
-    <div class="fables-page-content container overflow-hidden">
-        <div class="row">
-            <div class="col-12 col-sm-4 mb-4 wow fadeInDownBig" data-wow-duration="4s">
-                <div class="image-container translate-effect-right">
-                    <a href="#"><img src="{{ asset('/asset/image/profil.jpg') }}" alt=""
-                            class="img-fluid w-100"></a>
+    <!-- Start Header -->
+    <div class="">
+        <div class="container">
+            <div class="owl-carousel owl-theme default-carousel fables-sqr-nav dots-0 wow fadeInUpBig" data-wow-duration="2s">
+                <div>
+                    <img src="{{ asset('/asset/image/profil.jpg') }}">
                 </div>
-            </div>
-            <div class="col-12 col-sm-4 mb-4 wow fadeInDownBig" data-wow-duration="4s">
-                <div class="image-container translate-effect-right">
-                    <a href="#"><img src="{{ asset('/asset/image/profil.jpg') }}" alt=""
-                            class="img-fluid w-100"></a>
+                <div>
+                    <img src="{{ asset('/asset/image/profil.jpg') }}">
                 </div>
-            </div>
-            <div class="col-12 col-sm-4 mb-4 wow fadeInDownBig" data-wow-duration="4s">
-                <div class="image-container translate-effect-right">
-                    <a href="#"><img src="{{ asset('/asset/image/profil.jpg') }}" alt=""
-                            class="img-fluid w-100"></a>
+                <div>
+                    <img src="{{ asset('/asset/image/profil.jpg') }}">
                 </div>
             </div>
         </div>
+    </div>
+    <!-- /End Header -->
 
-        <div class="row">
-            <div class="col-12 col-lg-2 mb-4 wow fadeInDownBig" data-wow-duration="4s">
-                <div class="image-container circle-effect">
-                    <a href="#"><img src="{{ asset('/asset/image/profil.jpg') }}" alt=""
-                            class="img-fluid w-100"></a>
-                </div>
-            </div>
-            <div class="col-12 col-lg-2 mb-4 wow fadeInDownBig" data-wow-duration="4s">
-                <div class="image-container circle-effect">
-                    <a href="#"><img src="{{ asset('/asset/image/profil.jpg') }}" alt=""
-                            class="img-fluid w-100"></a>
-                </div>
-            </div>
-            <div class="col-12 col-lg-2 mb-4 wow fadeInDownBig" data-wow-duration="4s">
-                <div class="image-container circle-effect">
-                    <a href="#"><img src="{{ asset('/asset/image/profil.jpg') }}" alt=""
-                            class="img-fluid w-100"></a>
-                </div>
-            </div>
-            <div class="col-12 col-lg-2 mb-4 wow fadeInDownBig" data-wow-duration="4s">
-                <div class="image-container circle-effect">
-                    <a href="#"><img src="{{ asset('/asset/image/profil.jpg') }}" alt=""
-                            class="img-fluid w-100"></a>
-                </div>
-            </div>
-            <div class="col-12 col-lg-2 mb-4 wow fadeInDownBig" data-wow-duration="4s">
-                <div class="image-container circle-effect">
-                    <a href="#"><img src="{{ asset('/asset/image/profil.jpg') }}" alt=""
-                            class="img-fluid w-100"></a>
-                </div>
-            </div>
-            <div class="col-12 col-lg-2 mb-4 wow fadeInDownBig" data-wow-duration="4s">
-                <div class="image-container circle-effect">
-                    <a href="#"><img src="{{ asset('/asset/image/profil.jpg') }}" alt=""
-                            class="img-fluid w-100"></a>
-                </div>
+    <!-- Sambutan -->
+    <center><img id="aplikasi" width="50%" src="{{ asset('/asset/image/apk.png') }}"
+            class="rotateOut-effect mb-4 wow fadeInUpBig" data-wow-duration="4s"></center>
+    <div class="row">
+        <div class="col-12 col-sm-3 p-0 wow fadeInUpBig" data-wow-duration="4s">
+            <div class="">
+                <a href="#"><img src="{{ asset('/asset/image/paklurah1.png') }}" class="fables-logo"></a>
             </div>
         </div>
-
-            <center><img id="aplikasi" width="50%" src="{{asset('/asset/image/apk.png')}}" class="rotateOut-effect mb-4 wow fadeInUpBig" data-wow-duration="4s"></center>
-       </div>
-<!-- End Foto -->
-
-<!-- Sambutan -->
-            <div class="row">
-               <div class="col-12 col-lg-3 p-0 wow fadeInUpBig" data-wow-duration="4s">
-                   <div class="">
-                       <a href="#"><img src="{{asset('/asset/image/paklurah1.png')}}" class="fables-logo"></a>
-                   </div>
-               </div>
-               <div class="col-12 col-lg-9 p-0 wow fadeInUpBig" data-wow-duration="4s">
-                   <div class="image-container translate-effect-right">
-                        <div class="p-6">
-                                <h1 class="text-white font-29 semi-font wow fadeRightDownBig" data-wow-duration="4s""><center>KATA-KATA</center></h1>
-                            </div>
-                        <div class="p-4 container z-index position-relative fables-navigation fables-main-background-color">
-                                <h1 class="p-1 text-white font-29 semi-font"><center>SAMBUTAN</center></h1>
-                                <div class="font-14 text-white text-md-center">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-                                </div>
-                            </div>                     
+        <div class="col-12 col-sm-9 p-0 wow fadeInUpBig" data-wow-duration="4s">
+            <div class="image-container translate-effect-right">
+                <div class="p-6">
+                    <h1 class="text-white font-29 semi-font wow fadeRightDownBig" data-wow-duration="4s"">
+                        <center>KATA-KATA</center>
+                    </h1>
+                </div>
+                <div class="p-4 container z-index position-relative fables-navigation fables-main-background-color">
+                    <h1 class="p-1 text-white font-29 semi-font">
+                        <center>SAMBUTAN</center>
+                    </h1>
+                    <div class="font-14 text-white text-md-center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+                        error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
                     </div>
-                    <center><a href="https://wa.me/6285175137514"><img width="100%" src="{{asset('/asset/image/kdr.png')}}"></a></center>
-               </div>
-            
-</div>
+                </div>
+            </div>
+            <center><a href="https://wa.me/6285175137514"><img width="100%" src="{{ asset('/asset/image/kdr.png') }}"></a>
+            </center>
+        </div>
+    </div>
     <div class="fables-navigation fables-main-background-color py-3 py-lg-0">
         <h1 class="text-white font-29 semi-font mb-2">
             <center>BERITA TERKINI</center>
@@ -133,7 +96,7 @@
             <center>STATISTIK KELURAHAN</center>
         </h1>
     </div>
-    <div class="row row py-4 py-lg-5">
+    <div class="row py-4 py-lg-5">
         <div class="col-6 col-md-3 text-center">
             <div class="progressbar" data-animate="false">
                 <div class="circle" data-percent="33" data-fill="{&quot;color&quot;: &quot;#42E563&quot;}">
@@ -209,72 +172,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Video Youtube   -->
-    <!-- <div class="container">
-                                                                   <div id="cd-timeline" class="cd-container gallery-timeline my-4 my-md-5">
-                                                                        <span class="fables-main-background-color line"></span>
-                                                                        <div class="cd-timeline-block">
-                                                                            <div class="cd-timeline-img"></div>
-                                                                            <div class="cd-timeline-content">
-                                                                                  <a href="#"><img src="{{ asset('/asset/image/kucing.jpg') }}" alt="" class="w-100"></a>
-                                                                                  <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
-                                                                                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                                                  </a></h2>
-                                                                                  <p class="fables-forth-text-color fables-gallery-timeline-details">
-                                                                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
-                                                                                  </p>
-                                                                                <span class="cd-date fables-second-text-color">VIDEO</span>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="cd-timeline-block">
-                                                                            <div class="cd-timeline-img"></div>
-                                                                            <div class="cd-timeline-content">
-                                                                                  <a href="#"><img src="{{ asset('/asset/image/kucing.jpg') }}" alt="" class="w-100"></a>
-                                                                                  <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
-                                                                                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                                                  </a></h2>
-                                                                                  <p class="fables-forth-text-color fables-gallery-timeline-details">
-                                                                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
-                                                                                  </p>
-                                                                 
-                                                                                <span class="cd-date fables-second-text-color">VIDEO</span>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="cd-timeline-block">
-                                                                           <div class="cd-timeline-img"></div>
-                                                                            <div class="cd-timeline-content">
-                                                                                  <a href="#"><img src="{{ asset('/asset/image/kucing.jpg') }}" alt="" class="w-100"></a>
-                                                                                  <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
-                                                                                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                                                  </a></h2>
-                                                                                  <p class="fables-forth-text-color fables-gallery-timeline-details">
-                                                                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
-                                                                                  </p>
-                                                                 
-                                                                                <span class="cd-date fables-second-text-color">VIDEO</span>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="cd-timeline-block">
-                                                                            <div class="cd-timeline-img"></div>
-                                                                           <div class="cd-timeline-content">
-                                                                                  <a href="#"><img src="{{ asset('/asset/image/kucing.jpg') }}" alt="" class="w-100"></a>
-                                                                                  <h2 class="font-15 semi-font px-3 mt-2"><a href="#" class="fables-second-text-color fables-main-hover-color fables-gallery-timeline-head">
-                                                                                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                                                  </a></h2>
-                                                                                  <p class="fables-forth-text-color fables-gallery-timeline-details">
-                                                                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
-                                                                                  </p>
-                                                                 
-                                                                                <span class="cd-date fables-second-text-color">VIDEO</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>   -->
-    <!-- end video youtube -->
 
     <div class="fables-navigation fables-main-background-color py-3 py-lg-0">
         <h1 id="informasi" class="text-white font-29 semi-font mb-2">

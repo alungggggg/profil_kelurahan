@@ -24,6 +24,8 @@
                     <th>Desciption</th>
                     <th>Location</th>
                     <th>Nomor HP</th>
+                    <th>instagram</th>
+                    <th>facebook</th>
                     <th>Action</th>
                 </tr>
                 @foreach ($umkms as $umkm)
@@ -33,6 +35,20 @@
                         <td>{{ $umkm->description }}</td>
                         <td>{{ substr($umkm->location, 0, 50) }}... </td>
                         <td>{{ $umkm->nomor }}</td>
+                        <td>
+                            @if (!$umkm->instagram)
+                                Null
+                            @else
+                                had
+                            @endif
+                        </td>
+                        <td>
+                            @if (!$umkm->facebook)
+                                Null
+                            @else
+                                had
+                            @endif
+                        </td>
                         <td>
                             <a class="btn fables-second-background-color text-white"
                                 href="/umkm/update/{{ $umkm->id }}">Update</a>

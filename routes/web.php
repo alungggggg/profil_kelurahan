@@ -12,6 +12,7 @@ use App\Http\Controllers\umkmController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\guestController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\carouselController;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,6 +106,15 @@ Route::middleware(['auth'])->group(function () {
         });
         Route::post('/user/update/password/{id}', [userController::class, 'changePass']);
         Route::get('/user/delete/{id}', [userController::class, 'delete']);
+
+        Route::get('/carousel-image', [carouselController::class, 'index']);
+        Route::get('/carousel-image/add', function () {
+            return view('carousel.add');
+        });
+        Route::post('/carousel-image/add', [carouselController::class, 'add']);
+        Route::get('/carousel-image/update/{id}', [carouselController::class, 'updateView']);
+        Route::post('/carousel-image/update/{id}', [carouselController::class, 'update']);
+        Route::get('/carousel-image/delete/{id}', [carouselController::class, 'delete']);
     });
 
 

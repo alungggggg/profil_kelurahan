@@ -27,9 +27,9 @@
                                         <li><a href="" class="fables-product-btn"><span
                                                     class="fables-iconeye"></span></a></li>
                                         <li><a href="" class="fables-product-btn"><span
-                                                    class="fables-iconcompare"></span></a></li>
+                                                    class="fables-iconfacebook"></span></a></li>
                                         <li><button class="fables-product-btn"><span
-                                                    class="fables-iconheart"></span></button></li>
+                                                    class="fables-iconinstagram"></span></button></li>
                                     </ul>
                                 </div>
                             </div>
